@@ -2,23 +2,41 @@
 
 CTB evaluates **submitted crystal structures against explicit property tasks**. It preserves every submitted item, reports coverage and unknown results, and records the scientific method separately from the target threshold. Version 0.3.3 is candidate benchmark software; its example thresholds are not universal or scientifically validated standards.
 
-## Install and run without a GPU or DFT engine
+## Install the environment required by your task
+
+Use a dedicated environment rather than installing into Conda `base`. **Installing CTB core does not install the models needed for relaxation or learned property prediction.** Choose the packages for the work you intend to run:
+
+| Intended use | What to install | CTB 0.3.3 status |
+| --- | --- | --- |
+| Native space group / task assessment | CTB core (`pip install .`): NumPy, ASE, spglib, jsonschema | Implemented; CPU only |
+| Relaxation, energy/forces/stress | PyTorch + **MatterSim 1.1.2**, using CTB `.[mlff]` | CTB worker implemented; local model, deployment, environment lock and explicit budget required |
+| MatterSim finite-displacement phonons / EOS | Same `.[mlff]` environment, including **Phonopy 2.38.2, SeeK-path 2.1.0, SciPy 1.17.1** | Implemented recipes; model evaluation still requires authorization |
+| Learned properties with ALIGNN 2.0 | Separate PyTorch + **`alignn`** environment; upstream setup below | **CTB `alignn2` execution adapter is not implemented**; installation does not activate this route |
+| External DFT prepare/collect | Core + separately installed adapter | User supplies engine and assets; ABACUS electric response / complete High-K remains blocked |
+
+[Detailed backend environment instructions](docs/backends.md) include CPU/CUDA choices, MatterSim and ALIGNN package commands, installation checks, model requirements and the distinction between software installation and a runnable CTB backend.
+
+### Core environment: install before the native quickstart
 
 Project repository: [Mu-Jinming/CrysTargetBench](https://github.com/Mu-Jinming/CrysTargetBench).
 Report ordinary bugs and usage questions through [Issues](https://github.com/Mu-Jinming/CrysTargetBench/issues); see [SECURITY.md](SECURITY.md) before reporting sensitive information.
 
-Python 3.11 or newer. This 0.3.3 candidate is prepared locally; its source import and publication have not occurred. After the reviewed source import is merged, install from the repository:
+Python 3.11 is the locally tested baseline (package metadata allows >=3.11). The candidate source is available in this repository. Create and activate an isolated environment before installing:
 
 ```sh
 git clone https://github.com/Mu-Jinming/CrysTargetBench.git
 cd CrysTargetBench
-python -m venv .venv
+python3.11 -m venv .venv
 . .venv/bin/activate
+python -m pip install --upgrade pip
 python -m pip install .
+python -m pip check
+ctb --version
 ```
 
-The current local public-source tree also supports `python -m pip install .`. No PyPI availability is claimed.
-For wheel-only use, place the supplied wheel in a new directory:
+If you use Conda instead of venv, run `conda create -n ctb-core python=3.11 -y`, then `conda activate ctb-core` and `python -m pip install .` from the checkout. Use one environment method, not both. Each new terminal must activate the chosen environment.
+
+**Package availability:** the repository contains source. No PyPI release or GitHub Release wheel is claimed. Use the source installation above unless a maintainer has separately supplied a verified wheel. Do not expect the following filename to appear automatically after cloning. If you already have that wheel, place it in your working directory:
 
 ```sh
 python -m venv .venv
@@ -26,6 +44,39 @@ python -m venv .venv
 python -m pip install ./crystargetbench-0.3.3-py3-none-any.whl
 ctb --version
 ```
+
+### MatterSim environment for relaxation, phonons and EOS
+
+From the CTB checkout, create a separate environment, install an appropriate PyTorch build, then install the CTB MLFF extra. A minimal CPU setup is shown below; the [full instructions](docs/backends.md#mattersim-environment-relaxation-phonons-and-eos) give CUDA alternatives and version checks. These are installation steps, not a model run.
+
+```sh
+conda create -n ctb-mattersim python=3.11 -y
+conda activate ctb-mattersim
+python -m pip install --upgrade pip
+python -m pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install ".[mlff]" "torch==2.6.0" "torchvision==0.21.0" "torchaudio==2.6.0"
+python -m pip check
+```
+
+`.[mlff]` pins MatterSim to **1.1.2** and includes CTB/ASE/Phonopy/SeeK-path/SciPy; do not replace it with an unpinned MatterSim upgrade. The PyTorch wheel example is an installation profile, not a claim of fresh live validation. A checkpoint with verified identity and a fully bound deployment/permit are still required before relaxation. Return to `ctb-core` (or your core venv) for the native-only example below.
+
+### ALIGNN 2.0 environment for upstream property prediction
+
+The upstream package is named **`alignn`**, not `alignn2`. Keep it separate from the MatterSim worker environment:
+
+```sh
+conda create -n ctb-alignn python=3.11 -y
+conda activate ctb-alignn
+python -m pip install --upgrade pip
+python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install "alignn==2026.8.11" "torch==2.6.0"
+python -m pip check
+python -c "from importlib.metadata import version; print('alignn', version('alignn')); print('torch', version('torch'))"
+```
+
+This prepares a standalone upstream prediction environment; **CTB 0.3.3 has no production ALIGNN2 prediction adapter**. The registered provider and example policies are planning declarations. No `.[alignn2]` extra or working CTB ALIGNN prediction command is provided. See the [ALIGNN instructions and model requirements](docs/backends.md#alignn-20-environment-property-prediction) before using upstream models; learned gaps are surrogate predictions, not DFT band gaps.
+
+### Run the native example in the core environment
 
 Copy original examples out of the installed package. This works without a checkout and invokes no backend:
 
@@ -84,7 +135,7 @@ Optional MatterSim uses the existing CTB-owned worker, separate environment, mod
 The primary path exchanges files without installing or running an engine:
 
 ```sh
-python -m pip install ./ctb_abacus_example-0.1.1-py3-none-any.whl
+python -m pip install ./examples/dft_adapters/abacus
 ctb dft adapters
 # Fill your exact method and user-owned asset fingerprints in a private site file.
 ctb dft prepare --structures ctb-examples/structures/ideal_fcc.cif --task ctb-examples/tasks/bandgap_measure.json --site site.json --adapter abacus_example --output jobs
