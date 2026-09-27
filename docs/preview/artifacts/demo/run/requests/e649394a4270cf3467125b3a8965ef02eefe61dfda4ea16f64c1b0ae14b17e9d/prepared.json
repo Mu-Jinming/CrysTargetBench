@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "relative_path": "fixture-input.json",
+      "role": "input",
+      "sha256": "c191ef484738a13c813972fe3d7cdfc350dc7d6c3872f1f9f5ed6dc170cdf3d1",
+      "size_bytes": 2393
+    }
+  ],
+  "mapping": {
+    "basis": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "coordinate_convention": "cartesian_angstrom",
+    "output_to_input": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "reasons": [],
+  "request_digest": "e649394a4270cf3467125b3a8965ef02eefe61dfda4ea16f64c1b0ae14b17e9d",
+  "request_id": "e649394a4270cf3467125b3a8965ef02eefe61dfda4ea16f64c1b0ae14b17e9d",
+  "schema_version": "ctb.dft.prepared.v1",
+  "status": "ready"
+}

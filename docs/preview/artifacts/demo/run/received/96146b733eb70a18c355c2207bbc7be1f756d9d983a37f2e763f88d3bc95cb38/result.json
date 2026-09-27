@@ -1,0 +1,461 @@
+{
+  "adapter": {
+    "id": "second_example.v1",
+    "version": "0.1.1"
+  },
+  "adapter_api_version": 1,
+  "convergence": {
+    "engine_completed": true,
+    "ionic": null,
+    "response": null,
+    "scf": true
+  },
+  "effective_method": {
+    "asset_fingerprints": [],
+    "effective_parameters": {
+      "basis": "pw",
+      "cutoff_Ry": 80,
+      "force_tolerance_eV_A": 0.02,
+      "hubbard_u": {},
+      "k_grid": [
+        2,
+        2,
+        2
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "soc": false,
+      "spin": 1,
+      "stress_tolerance_GPa": 0.1,
+      "xc": "PBE"
+    },
+    "method_id": "synthetic.preview.v1",
+    "software": [
+      {
+        "name": "analytic_test",
+        "version": "analytic-fixture-1"
+      }
+    ]
+  },
+  "engine": {
+    "name": "analytic_test",
+    "version": "analytic-fixture-1"
+  },
+  "errors": [],
+  "execution": {
+    "count_evidence": "unknown",
+    "engine_invocations": null,
+    "mode": "fixture",
+    "wall_seconds": null
+  },
+  "mapping": {
+    "basis": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "coordinate_convention": "cartesian_angstrom",
+    "output_to_input": [
+      0,
+      1
+    ]
+  },
+  "method_digest": "4ead57294e6471cb761e9b6766e8c3e9d8899ec112f15c2eb559b4f7d491944c",
+  "observations": [
+    {
+      "calculation_status": "completed",
+      "definition_id": "synthetic.second.eigenvalues",
+      "diagnostics": {
+        "coordinate_convention": "fractional_reciprocal_row_vectors_include_2pi",
+        "kpoint_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "kpoints": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "maximum_occupation": 2,
+        "occupation_convention": "per_state_unweighted",
+        "occupation_tolerance": 1e-06,
+        "reciprocal_basis_Ainv": [
+          [
+            1.2566370614359172,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.2566370614359172,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2566370614359172
+          ]
+        ],
+        "sampling": "uniform_mesh",
+        "sampling_manifest_digest": "ffe5dd68244c332627d4300053c15e160400636a80ca570969095308c99b0da4",
+        "spin_channels": 1,
+        "weights": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ]
+      },
+      "evidence_kind": "synthetic",
+      "quality_status": "qualified",
+      "quantity": "eigenvalues",
+      "raw_artifacts": [
+        {
+          "relative_path": "authored-observations.json",
+          "role": "raw_output",
+          "sha256": "72c924571c0ee73be2dcd945fac7279a7b432e1757f47acb206e65751f51e259",
+          "size_bytes": 6907
+        }
+      ],
+      "unit": "eV",
+      "value": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ]
+      ]
+    },
+    {
+      "calculation_status": "completed",
+      "definition_id": "synthetic.second.occupations",
+      "diagnostics": {
+        "coordinate_convention": "fractional_reciprocal_row_vectors_include_2pi",
+        "kpoint_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "kpoints": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "maximum_occupation": 2,
+        "occupation_convention": "per_state_unweighted",
+        "occupation_tolerance": 1e-06,
+        "reciprocal_basis_Ainv": [
+          [
+            1.2566370614359172,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.2566370614359172,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2566370614359172
+          ]
+        ],
+        "sampling": "uniform_mesh",
+        "sampling_manifest_digest": "ffe5dd68244c332627d4300053c15e160400636a80ca570969095308c99b0da4",
+        "spin_channels": 1,
+        "weights": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ]
+      },
+      "evidence_kind": "synthetic",
+      "quality_status": "qualified",
+      "quantity": "occupations",
+      "raw_artifacts": [
+        {
+          "relative_path": "authored-observations.json",
+          "role": "raw_output",
+          "sha256": "72c924571c0ee73be2dcd945fac7279a7b432e1757f47acb206e65751f51e259",
+          "size_bytes": 6907
+        }
+      ],
+      "unit": "1",
+      "value": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "observed_geometry": {
+    "cell": [
+      [
+        5.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "coordinate_system": "fractional",
+    "domain_checks": {
+      "axis_permutation_invariant": true,
+      "diagonal_replication_invariant": true,
+      "general_unimodular_basis_invariance_guaranteed": false,
+      "heuristic_id": "vacuum_guard.v1",
+      "maximum_empty_slab_A": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "origin_translation_invariant": true,
+      "physical_dimensionality_classification": false,
+      "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+      "rule": "ordered_3d.v1",
+      "scope": "original_submission_only",
+      "stability_evidence": false,
+      "vacuum_limit_A": 10.0
+    },
+    "geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+    "length_unit": "angstrom",
+    "magnetic_state": {
+      "kind": "nonmagnetic",
+      "moments": [
+        0.0,
+        0.0
+      ]
+    },
+    "occupancy": [
+      1.0,
+      1.0
+    ],
+    "parent": null,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "species": [
+      "Ar",
+      "Ar"
+    ],
+    "stage": "input",
+    "transformation": {
+      "basis_mapping": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "kind": "identity",
+      "site_mapping": [
+        0,
+        1
+      ]
+    }
+  },
+  "reference_geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+  "request_digest": "96146b733eb70a18c355c2207bbc7be1f756d9d983a37f2e763f88d3bc95cb38",
+  "request_id": "96146b733eb70a18c355c2207bbc7be1f756d9d983a37f2e763f88d3bc95cb38",
+  "schema_version": "ctb.dft.result.v2"
+}

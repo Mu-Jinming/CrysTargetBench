@@ -1,0 +1,248 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "ctb.deployment.v2",
+        "ctb.deployment.v3"
+      ]
+    },
+    "deployment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "default_policy": {
+      "const": "auto_mlff_preferred"
+    },
+    "default_mlff_provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "default_dft_provider": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "providers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "native",
+              "mlff",
+              "dft",
+              "surrogate"
+            ]
+          },
+          "adapter_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "configured": {
+            "type": "boolean"
+          },
+          "worker_argv": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "assets": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "sha256": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "license_status": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "path",
+                "sha256",
+                "license_status"
+              ]
+            }
+          },
+          "parameter_set_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reported_capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "model_manifest": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "live_permit": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "environment_lock": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "worker_timeout_seconds": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "budget_predecessor_ledger": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Explicit preserved predecessor ledger when a new owner authorization supersedes an old budget."
+          }
+        },
+        "required": [
+          "family",
+          "adapter_id",
+          "configured",
+          "worker_argv",
+          "version",
+          "assets",
+          "parameter_set_id",
+          "reported_capabilities"
+        ]
+      }
+    },
+    "paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "runs_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cache_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assets_root": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "runs_root",
+        "cache_root",
+        "assets_root"
+      ]
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "network_downloads_allowed": {
+          "type": "boolean"
+        },
+        "mlff_authorized": {
+          "type": "boolean"
+        },
+        "dft_authorized": {
+          "type": "boolean"
+        },
+        "max_dft_jobs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_concurrent_jobs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "per_job_wall_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "per_job_cpu_cores": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Hard CPU core limit for each physical job."
+        },
+        "max_scratch_gb": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Hard aggregate scratch storage limit in decimal GB."
+        },
+        "max_supercell_atoms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "executor": {
+          "enum": [
+            "local",
+            "jobflow_remote",
+            "site_plugin"
+          ]
+        }
+      },
+      "required": [
+        "network_downloads_allowed",
+        "mlff_authorized",
+        "dft_authorized",
+        "max_dft_jobs",
+        "max_concurrent_jobs",
+        "per_job_wall_seconds",
+        "max_supercell_atoms",
+        "executor"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "deployment_id",
+    "default_policy",
+    "default_mlff_provider",
+    "default_dft_provider",
+    "providers",
+    "paths",
+    "execution"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

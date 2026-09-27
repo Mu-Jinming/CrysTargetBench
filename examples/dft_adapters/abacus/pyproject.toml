@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools==75.8.2", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ctb-abacus-example"
+version = "0.1.1"
+requires-python = ">=3.11"
+dependencies = ["crystargetbench>=0.3.1,<0.4"]
+license = {text = "MIT"}
+[project.entry-points."crystargetbench.dft_adapters"]
+abacus_example = "ctb_abacus_example.adapter:Adapter"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.setuptools.package-data]
+ctb_abacus_example = ["*.json"]

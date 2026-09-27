@@ -1,0 +1,51 @@
+{
+  "schema_version": "ctb.protocol_candidate.v2",
+  "protocol_id": "ctb.phonon.path.candidate.v0_2",
+  "status": "candidate",
+  "benchmark_eligible": false,
+  "purpose": "开发候选参数，须数值收敛后发布",
+  "input_domain": "3d_ordered_full_occupancy",
+  "reference_geometry": "relaxed",
+  "parameters": {
+    "relaxation": {
+      "require_converged": true,
+      "fmax_eV_per_A": 0.005,
+      "stress_max_GPa": 0.1,
+      "max_steps": 2000,
+      "target_pressure_GPa": 0.0
+    },
+    "phonon": {
+      "supercell_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "displacement_A": 0.01,
+      "is_plusminus": "auto",
+      "force_drift_subtraction": true,
+      "force_constant_symmetrization": true,
+      "nac": "none",
+      "q_scope": "path",
+      "path_points_parameter": 101
+    },
+    "scope_notice": "finite-displacement harmonic path diagnostic; not full-BZ or finite-temperature proof"
+  },
+  "required_resolutions": [
+    "pin force backend asset and versions",
+    "verify unit/primitive mappings",
+    "validate force/stress/supercell/displacement convergence"
+  ],
+  "validation_status": "not_scientifically_validated"
+}

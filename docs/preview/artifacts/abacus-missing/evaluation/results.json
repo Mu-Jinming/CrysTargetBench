@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "benchmark_eligible": false,
+      "constraints": [],
+      "decision": null,
+      "evidence_scope": "external_collection",
+      "input_status": "valid",
+      "item_id": "item-000000",
+      "measurement_eligibility": {
+        "gap": {
+          "eligible": false,
+          "reasons": [
+            "calculation_status:missing",
+            "quality_status:unverified",
+            "identity_status:unverified",
+            "reference_geometry_mismatch_or_unbound",
+            "value_missing_or_not_finite_scalar"
+          ]
+        }
+      },
+      "measurements": {
+        "gap": {
+          "artifact_refs": [],
+          "asset_digests": {},
+          "backend_family": "dft",
+          "backend_id": "abacus_example",
+          "backend_version": "0.1.1",
+          "benchmark_eligible": false,
+          "calculation_status": "missing",
+          "definition_id": "band_gap_eV@external:f5e8f5dcb5c7485a",
+          "dependency_measurement_ids": [],
+          "diagnostics": {},
+          "evidence_kind": "imported",
+          "identity_status": "unverified",
+          "item_links": [
+            "item-000000"
+          ],
+          "measurement_id": "27033dcb4d365aa7cb06105b5570a643cc03937caf77c43b22dbfb2ef990662b",
+          "model_digest": null,
+          "physics_fidelity": "dft",
+          "property_id": "band_gap_eV",
+          "protocol_digest": "f5e8f5dcb5c7485a425c809a597465c9163b000d65e00bf9cb3da80de5bb3e54",
+          "quality_status": "unverified",
+          "reasons": [
+            "awaiting_final_relaxed_geometry"
+          ],
+          "reference_geometry_id": null,
+          "source_backend_id": null,
+          "unit": "eV",
+          "upstream_fidelity": [
+            "dft"
+          ],
+          "value": null
+        }
+      },
+      "reference_geometry": null,
+      "reference_geometry_id": null
+    }
+  ]
+}

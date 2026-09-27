@@ -1,0 +1,57 @@
+{
+  "benchmark_eligible": false,
+  "coverage": {
+    "gap": {
+      "definition": "Accepted observations / all submitted items",
+      "denominator": 1,
+      "numerator": 0,
+      "status": "available",
+      "subset": "all_submitted",
+      "value": 0.0
+    }
+  },
+  "distributions": {
+    "gap": {
+      "accepted_count": 0,
+      "definition": "Finite accepted scalar observations; no imputation or deduplication",
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "minimum": null,
+      "observed_count": 0,
+      "sample_count": 0,
+      "status": "unavailable",
+      "subset": "accepted_measurements"
+    }
+  },
+  "full_measurement_coverage": {
+    "definition": "Items with all requested observations accepted / all submitted items",
+    "denominator": 1,
+    "numerator": 0,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.0
+  },
+  "generation_cost": {
+    "definition": "Generator cost is outside the submitted-structure boundary",
+    "status": "unavailable",
+    "value": null
+  },
+  "mode": "measure",
+  "n_input_invalid": 0,
+  "n_input_unsupported": 0,
+  "n_input_valid": 1,
+  "n_submitted": 1,
+  "novelty": {
+    "definition": "No validated reference library was provided",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "schema_version": "ctb.metrics.v1",
+  "sun": {
+    "definition": "SUN requires a defined, versioned reference library",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "task_id": "example.bandgap.measure"
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "ctb.s2.live_permit_template.1",
+  "artifact_kind": "disabled_site_authorization_template_not_runtime_deployment",
+  "authorized": false,
+  "owner_approval_reference": null,
+  "checkpoint": {
+    "path": null,
+    "sha256": null,
+    "model_id": null,
+    "source_reference": null,
+    "license_review_status": "unresolved"
+  },
+  "worker_environment_lock_sha256": null,
+  "deployment_digest": null,
+  "device": null,
+  "input_manifest_sha256": null,
+  "protocol_digest": null,
+  "allowed_operations": [
+    "energy_forces_stress",
+    "relaxation",
+    "finite_displacement_phonon",
+    "bulk_eos"
+  ],
+  "limits": {
+    "max_unique_structures": 2,
+    "max_supercell_atoms": 64,
+    "max_displaced_structures_total": 96,
+    "max_backend_structure_evaluations": 4000,
+    "max_concurrent_workers": 1,
+    "max_relax_steps_per_structure": 500,
+    "max_total_wall_seconds": 3600,
+    "max_scratch_bytes": 2147483648,
+    "max_retries": 0,
+    "max_dft_jobs": 0
+  },
+  "downloads_authorized": false,
+  "cluster_authorized": false,
+  "notes": [
+    "这些是等待所有者评估的建议上限，不是本次获批预算。",
+    "不得由Codex自行启用；审批需绑定实际输入、模型、worker、协议和部署。",
+    "达到上限须停止并如实记录，不能增大预算或改参数直到成功。"
+  ]
+}

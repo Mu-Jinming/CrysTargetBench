@@ -1,0 +1,26 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.sg225",
+  "title": "原始坐标空间群225",
+  "mode": "screen",
+  "reference_geometry": "input",
+  "metric_scope": "submission",
+  "measurements": {
+    "sg": {
+      "property_id": "space_group_number",
+      "unit": "1",
+      "required_fidelity": "native"
+    }
+  },
+  "report": [
+    "sg"
+  ],
+  "constraints": [
+    {
+      "id": "sg_target",
+      "measurement": "sg",
+      "operator": "eq",
+      "value": 225
+    }
+  ]
+}

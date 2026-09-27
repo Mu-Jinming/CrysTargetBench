@@ -1,0 +1,401 @@
+{
+  "benchmark_eligible": false,
+  "comparability_digest": "943fad119ad49eefc34a7a466649bac00a478329b7d5e5ed3ec6cf9c4e9f50d2",
+  "execution_kind": "planning_only",
+  "execution_preflight_required": false,
+  "item_preflight": [
+    {
+      "implicit_itemwise_switch": false,
+      "item_id": "item-000000",
+      "reason": null,
+      "status": "eligible_for_preflight"
+    },
+    {
+      "implicit_itemwise_switch": false,
+      "item_id": "item-000001",
+      "reason": null,
+      "status": "eligible_for_preflight"
+    },
+    {
+      "implicit_itemwise_switch": false,
+      "item_id": "item-000002",
+      "reason": null,
+      "status": "eligible_for_preflight"
+    },
+    {
+      "implicit_itemwise_switch": false,
+      "item_id": "item-000003",
+      "status": "invalid"
+    }
+  ],
+  "live_preflight": {},
+  "nodes": [
+    {
+      "computation_digest": null,
+      "computation_digest_resolution": "bind_real_geometry_and_dependency_artifacts_before_cache_lookup",
+      "conditions": [],
+      "dependencies": [],
+      "dependency_artifact_refs": [],
+      "execution_status": "not_executed",
+      "family": "native",
+      "geometry_ref": {
+        "field": "input_geometry.geometry_id",
+        "kind": "submission_geometry"
+      },
+      "input_domain": "3d_ordered_full_occupancy",
+      "kind": "input_validation",
+      "node_id": "validate_input",
+      "plan_node_digest": "ee98507b90d1b2356a98aec0d677c227a7938c5c4a01ab94c0b241350a9b8b65",
+      "provider": null,
+      "required_capabilities": [],
+      "scope": "per_submission_item"
+    },
+    {
+      "computation_digest": null,
+      "computation_digest_resolution": "bind_real_geometry_and_dependency_artifacts_before_cache_lookup",
+      "conditions": [],
+      "dependencies": [
+        "validate_input"
+      ],
+      "dependency_artifact_refs": [
+        {
+          "kind": "node_output",
+          "node_id": "validate_input",
+          "output": "artifact_digest",
+          "resolved_digest": null
+        }
+      ],
+      "execution_status": "not_executed",
+      "family": "native",
+      "geometry_ref": {
+        "field": "input_geometry.geometry_id",
+        "kind": "submission_geometry"
+      },
+      "identity_rule": "bind_actual_geometry_digest_after_completion",
+      "kind": "freeze_reference_geometry",
+      "node_id": "freeze_geometry",
+      "plan_node_digest": "12dc3c4b00e8400b691a1a22c20a43ae9276ddde9aa79317c93440850fb20c58",
+      "preserve_input_snapshot": true,
+      "provider": null,
+      "required_capabilities": [],
+      "scope": "per_submission_item"
+    },
+    {
+      "computation_digest": null,
+      "computation_digest_resolution": "bind_real_geometry_and_dependency_artifacts_before_cache_lookup",
+      "conditions": [],
+      "dependencies": [
+        "freeze_geometry"
+      ],
+      "dependency_artifact_refs": [
+        {
+          "kind": "node_output",
+          "node_id": "freeze_geometry",
+          "output": "artifact_digest",
+          "resolved_digest": null
+        }
+      ],
+      "execution_status": "not_executed",
+      "family": "native",
+      "forbid_recipe_substitution": true,
+      "geometry_ref": {
+        "kind": "node_output",
+        "node_id": "freeze_geometry",
+        "output": "reference_geometry_id"
+      },
+      "kind": "native_space_group",
+      "measurement_alias": "sg",
+      "node_id": "measure:sg",
+      "plan_node_digest": "3bc3cf76e99cb8e53214d42cdd39e463fe471aabb98e6621e4ab0bf5835e06bb",
+      "property_id": "space_group_number",
+      "provider": "symmetry",
+      "required_capabilities": [
+        "space_group"
+      ],
+      "scope": "per_submission_item"
+    },
+    {
+      "computation_digest": null,
+      "computation_digest_resolution": "bind_real_geometry_and_dependency_artifacts_before_cache_lookup",
+      "conditions": [],
+      "dependencies": [
+        "measure:sg"
+      ],
+      "dependency_artifact_refs": [
+        {
+          "kind": "node_output",
+          "node_id": "measure:sg",
+          "output": "artifact_digest",
+          "resolved_digest": null
+        }
+      ],
+      "execution_status": "not_executed",
+      "family": "native",
+      "full_submission_denominator": true,
+      "geometry_ref": {
+        "kind": "node_output",
+        "node_id": "freeze_geometry",
+        "output": "reference_geometry_id"
+      },
+      "kind": "three_valued_assessment",
+      "node_id": "joint_assessment",
+      "plan_node_digest": "9064eb007c1974a644b3f20a2f7b32eedfe7ef0f66977772d94d0723c43255f9",
+      "provider": null,
+      "required_capabilities": [],
+      "scope": "per_submission_item"
+    },
+    {
+      "benchmark_eligible": false,
+      "computation_digest": null,
+      "computation_digest_resolution": "bind_real_geometry_and_dependency_artifacts_before_cache_lookup",
+      "conditions": [],
+      "dependencies": [
+        "joint_assessment"
+      ],
+      "dependency_artifact_refs": [
+        {
+          "kind": "node_output",
+          "node_id": "joint_assessment",
+          "output": "artifact_digest",
+          "resolved_digest": null
+        }
+      ],
+      "execution_status": "not_executed",
+      "family": "native",
+      "geometry_ref": {
+        "kind": "node_output",
+        "node_id": "freeze_geometry",
+        "output": "reference_geometry_id"
+      },
+      "kind": "submission_metrics",
+      "metric_mode": "screen",
+      "node_id": "metrics",
+      "plan_node_digest": "767272aae5f00c08207cdd80172bef45154926f317c9bec830c590b88fac3e8c",
+      "provider": null,
+      "required_capabilities": [],
+      "scope": "submission"
+    }
+  ],
+  "physical_failures_created": 0,
+  "physics_calls": 0,
+  "physics_fidelity": "native",
+  "promotion_reason": null,
+  "protocol_digest": "0b7d15e1a74226f4befaffa7bc6705f5173f4f71eae0968f1a24840047996569",
+  "protocol_lock": {
+    "benchmark_eligible": false,
+    "lock_resolved": true,
+    "parser_lock": {
+      "dependencies": {
+        "ase": "3.26.0",
+        "numpy": "2.2.6",
+        "scipy": "1.17.1",
+        "spglib": "2.6.0"
+      },
+      "distribution": "ase",
+      "installed_version": "3.26.0"
+    },
+    "physics_fidelity": "native",
+    "protocol": {
+      "benchmark_eligible": false,
+      "input_domain": "3d_ordered_full_occupancy",
+      "parameters": {
+        "angle_tolerance_deg": 5.0,
+        "symprec_A": 0.01,
+        "target_symmetrization": false
+      },
+      "protocol_id": "ctb.symmetry.candidate.v0_2",
+      "purpose": "S1 candidate recipe planning; numerical settings are not convergence evidence",
+      "reference_geometry": "input",
+      "required_resolutions": [
+        "pin installed spglib and structure parser versions"
+      ],
+      "schema_version": "ctb.protocol_candidate.v2",
+      "status": "candidate",
+      "validation_status": "not_scientifically_validated"
+    },
+    "protocol_digest": "0b7d15e1a74226f4befaffa7bc6705f5173f4f71eae0968f1a24840047996569",
+    "provider_locks": {
+      "symmetry": {
+        "adapter_id": "ctb.native.spglib",
+        "asset_digests": {},
+        "family": "native",
+        "parameter_set_id": null,
+        "registry_capabilities": [
+          "space_group"
+        ],
+        "version": "2.6.0"
+      }
+    },
+    "recipe_implementation_version": "ctb.s1.recipes.v1",
+    "routes": {
+      "sg": {
+        "definition_id": "space_group_number@native:symmetry:ac04f9c5b87a4795",
+        "family": "native",
+        "physics_fidelity": "native",
+        "provider": "symmetry",
+        "reference_geometry": {
+          "kind": "node_output",
+          "node_id": "freeze_geometry",
+          "output": "reference_geometry_id"
+        },
+        "required_capabilities": [
+          "space_group"
+        ]
+      }
+    },
+    "scheduling": {
+      "dft_response_gates": "explicit_DAG_conditions_preserved",
+      "measurement_order": [
+        "sg"
+      ],
+      "priority_groups": [
+        "band_gap",
+        "phonon",
+        "dielectric",
+        "space_group",
+        "other_including_bulk"
+      ],
+      "reference_dependency": "validate_then_relax_or_check_then_freeze_before_measurements",
+      "s2_local_gates": {
+        "eos_point_unqualified": "skip_remaining_points_no_fit",
+        "measurement_accepted_fail": "continue_independent_measurements",
+        "measurement_failed_or_unknown": "continue_independent_measurements",
+        "reference_unqualified": "unknown_all"
+      },
+      "tie_break": "property_group_then_property_id_then_alias_unicode",
+      "version": "ctb.serial_recipe_schedule.v1"
+    },
+    "schema_version": "ctb.protocol_lock.v1",
+    "scientific_validation": "not_scientifically_validated",
+    "unresolved_fields": [],
+    "warm_start": "none"
+  },
+  "provider_states": {
+    "symmetry": {
+      "adapter_id": "ctb.native.spglib",
+      "asset_status": {},
+      "benchmark_eligible": false,
+      "capabilities": [
+        "space_group"
+      ],
+      "configured": true,
+      "configured_version": null,
+      "distribution": "spglib",
+      "environment_lock_configured": false,
+      "family": "native",
+      "installed": true,
+      "installed_version": "2.6.0",
+      "interface_implemented": true,
+      "live_permit_configured": false,
+      "live_tested": false,
+      "model_manifest_configured": false,
+      "native_dependencies": {
+        "ase": {
+          "installed": true,
+          "installed_version": "3.26.0"
+        },
+        "numpy": {
+          "installed": true,
+          "installed_version": "2.2.6"
+        },
+        "scipy": {
+          "installed": true,
+          "installed_version": "1.17.1"
+        },
+        "spglib": {
+          "installed": true,
+          "installed_version": "2.6.0"
+        }
+      },
+      "parser_dependency": {
+        "distribution": "ase",
+        "installed": true,
+        "installed_version": "3.26.0"
+      },
+      "parser_tested": false,
+      "physics_validated": false,
+      "ready": true,
+      "registered": true,
+      "status_notice": "Registration/installation is not live or scientific verification",
+      "version_resolved": true
+    }
+  },
+  "reasons": [],
+  "reference_geometry_backend": "native",
+  "requested_backend": "auto",
+  "resource_preflight": {
+    "cpu_seconds_estimate": null,
+    "dft_jobs_upper_bound": 0,
+    "estimate_kind": "conservative_pre_symmetry_upper_bound",
+    "estimate_scope": "initial DAG expansion; relaxation restarts/retries require additional runtime reservation",
+    "hard_limits": {
+      "max_concurrent_jobs": 1,
+      "max_dft_jobs": 0,
+      "max_scratch_gb": 10.0,
+      "max_supercell_atoms": 256,
+      "per_job_cpu_cores": 1,
+      "per_job_wall_seconds": 3600
+    },
+    "per_item": [
+      {
+        "atom_count": 4,
+        "dft_force_groups": 0,
+        "dft_jobs_upper_bound": 0,
+        "displacement_jobs_upper_bound": 0,
+        "item_id": "item-000000",
+        "supercell_atoms_upper_bound": 4
+      },
+      {
+        "atom_count": 2,
+        "dft_force_groups": 0,
+        "dft_jobs_upper_bound": 0,
+        "displacement_jobs_upper_bound": 0,
+        "item_id": "item-000001",
+        "supercell_atoms_upper_bound": 2
+      },
+      {
+        "atom_count": 4,
+        "dft_force_groups": 0,
+        "dft_jobs_upper_bound": 0,
+        "displacement_jobs_upper_bound": 0,
+        "item_id": "item-000002",
+        "supercell_atoms_upper_bound": 4
+      },
+      {
+        "atom_count": null,
+        "dft_force_groups": 0,
+        "dft_jobs_upper_bound": 0,
+        "displacement_jobs_upper_bound": 0,
+        "item_id": "item-000003",
+        "supercell_atoms_upper_bound": null
+      }
+    ],
+    "runtime_reservation_required": false,
+    "scratch_gb_estimate": null,
+    "submitted_jobs": 0,
+    "unknown_cost_policy": "block_execution_until_expanded_and_within_hard_limits",
+    "violations": [],
+    "wall_seconds_estimate": null
+  },
+  "routes": {
+    "sg": {
+      "definition_id": "space_group_number@native:symmetry:ac04f9c5b87a4795",
+      "family": "native",
+      "physics_fidelity": "native",
+      "provider": "symmetry",
+      "reference_geometry": {
+        "kind": "node_output",
+        "node_id": "freeze_geometry",
+        "output": "reference_geometry_id"
+      },
+      "required_capabilities": [
+        "space_group"
+      ]
+    }
+  },
+  "s2_execution_supported": false,
+  "schema_version": "ctb.plan.v1",
+  "status": "ready",
+  "submitted_jobs": 0,
+  "task_id": "example.sg225"
+}

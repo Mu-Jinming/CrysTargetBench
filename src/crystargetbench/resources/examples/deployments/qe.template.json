@@ -1,0 +1,121 @@
+{
+  "schema_version": "ctb.deployment.v2",
+  "deployment_id": "example.qe.unconfigured",
+  "default_policy": "auto_mlff_preferred",
+  "default_mlff_provider": "mattersim",
+  "default_dft_provider": "qe",
+  "providers": {
+    "symmetry": {
+      "family": "native",
+      "adapter_id": "ctb.native.spglib",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {},
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "space_group"
+      ]
+    },
+    "mattersim": {
+      "family": "mlff",
+      "adapter_id": "ctb.ase.mattersim",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {
+        "checkpoint": {
+          "path": null,
+          "sha256": null,
+          "license_status": "site_managed_unresolved"
+        }
+      },
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "energy",
+        "forces",
+        "stress"
+      ]
+    },
+    "vasp_atomate2": {
+      "family": "dft",
+      "adapter_id": "ctb.dft.vasp_atomate2",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {
+        "pseudopotential_manifest": {
+          "path": null,
+          "sha256": null,
+          "license_status": "site_managed_unresolved"
+        }
+      },
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "energy",
+        "forces",
+        "stress",
+        "band_eigenvalues",
+        "electronic_dielectric",
+        "born_charges",
+        "ionic_dielectric"
+      ]
+    },
+    "qe": {
+      "family": "dft",
+      "adapter_id": "ctb.dft.qe",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {
+        "pseudopotential_manifest": {
+          "path": null,
+          "sha256": null,
+          "license_status": "site_managed_unresolved"
+        }
+      },
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "energy",
+        "forces",
+        "stress",
+        "band_eigenvalues",
+        "electronic_dielectric",
+        "born_charges"
+      ]
+    },
+    "alignn2": {
+      "family": "surrogate",
+      "adapter_id": "ctb.surrogate.alignn2",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {
+        "checkpoint": {
+          "path": null,
+          "sha256": null,
+          "license_status": "site_managed_unresolved"
+        }
+      },
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "band_gap_prediction"
+      ]
+    }
+  },
+  "paths": {
+    "runs_root": "./runs",
+    "cache_root": "./.ctb/cache",
+    "assets_root": "./.ctb/assets"
+  },
+  "execution": {
+    "network_downloads_allowed": false,
+    "mlff_authorized": false,
+    "dft_authorized": false,
+    "max_dft_jobs": 0,
+    "max_concurrent_jobs": 1,
+    "per_job_wall_seconds": 3600,
+    "max_supercell_atoms": 256,
+    "executor": "local"
+  }
+}

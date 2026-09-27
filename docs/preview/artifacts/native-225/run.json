@@ -1,0 +1,41 @@
+{
+  "benchmark_eligible": false,
+  "cache_hits": 0,
+  "comparability_digest": "943fad119ad49eefc34a7a466649bac00a478329b7d5e5ed3ec6cf9c4e9f50d2",
+  "dft_verified": false,
+  "dry_run": false,
+  "generation_cost": null,
+  "input_status_counts": {
+    "invalid": 0,
+    "unsupported": 0,
+    "valid": 2
+  },
+  "native_calls": 2,
+  "physics_calls": 0,
+  "physics_resource_usage": null,
+  "plan_status": "ready",
+  "promotion_reason": null,
+  "protocol_status": "candidate",
+  "requested_backend": "auto",
+  "resolved_backends": {
+    "sg": {
+      "definition_id": "space_group_number@native:symmetry:ac04f9c5b87a4795",
+      "family": "native",
+      "physics_fidelity": "native",
+      "provider": "symmetry",
+      "reference_geometry": {
+        "kind": "node_output",
+        "node_id": "freeze_geometry",
+        "output": "reference_geometry_id"
+      },
+      "required_capabilities": [
+        "space_group"
+      ]
+    }
+  },
+  "run_digest": "5916d074419a8a6748c03f0a2af8ff659b5ef9d503e42f4c42bd00e6ae7f4782",
+  "schema_version": "ctb.run.v2",
+  "status": "completed",
+  "submission_digest": "5d93829d360ca40ca29cf3a1f57495da2e0a7a9b913c0256352d87e20829d24e",
+  "submitted_jobs": 0
+}

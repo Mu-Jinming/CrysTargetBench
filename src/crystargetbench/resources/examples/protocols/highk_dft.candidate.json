@@ -1,0 +1,80 @@
+{
+  "schema_version": "ctb.protocol_candidate.v2",
+  "protocol_id": "ctb.highk.dft.candidate.v0_2",
+  "status": "candidate",
+  "benchmark_eligible": false,
+  "purpose": "formal response scope, but candidate numerical protocol remains unvalidated",
+  "input_domain": "3d_ordered_full_occupancy",
+  "reference_geometry": "relaxed",
+  "parameters": {
+    "relaxation": {
+      "require_converged": true,
+      "fmax_eV_per_A": 0.005,
+      "stress_max_GPa": 0.1,
+      "max_steps": 2000,
+      "target_pressure_GPa": 0.0
+    },
+    "phonon": {
+      "supercell_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "displacement_A": 0.01,
+      "is_plusminus": "auto",
+      "force_drift_subtraction": true,
+      "force_constant_symmetrization": true,
+      "nac": "from_dft_born_and_electronic",
+      "q_scope": "mesh",
+      "mesh": [
+        8,
+        8,
+        8
+      ],
+      "gamma_center": true
+    },
+    "scope_notice": "candidate DFT harmonic mesh protocol; example grids are not convergence evidence",
+    "band_gap": {
+      "definition": "kmesh_generalized_ks",
+      "functional": "PBE",
+      "mesh_policy_id": null,
+      "spin_u_soc_policy_id": null
+    },
+    "dielectric": {
+      "components": [
+        "electronic",
+        "ionic"
+      ],
+      "frequency": "static",
+      "boundary": "fixed_strain",
+      "scalarization": "trace_over_3",
+      "negative_optical_mode_policy": "reject_quality",
+      "silent_frequency_floor": false
+    },
+    "dft": {
+      "parameter_set_id": null,
+      "pseudopotential_manifest_sha256": null,
+      "cutoff_and_convergence_profile": null
+    }
+  },
+  "required_resolutions": [
+    "resolve engine/pseudos/functional/U/SOC/spin and kmesh",
+    "verify final same-geometry lineage",
+    "validate qmesh/supercell/soft modes",
+    "validate dielectric sum and unit conventions",
+    "authorize DFT budget"
+  ],
+  "validation_status": "not_scientifically_validated"
+}

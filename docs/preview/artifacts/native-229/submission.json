@@ -1,0 +1,237 @@
+{
+  "items": [
+    {
+      "atom_count": 4,
+      "file_sha256": "5fd3be9400058eba0af2605440a178340c5c7129d68013d15473a6e87a673770",
+      "input_geometry": {
+        "cell": [
+          [
+            5.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            5.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            5.0
+          ]
+        ],
+        "coordinate_system": "fractional",
+        "domain_checks": {
+          "axis_permutation_invariant": true,
+          "diagonal_replication_invariant": true,
+          "general_unimodular_basis_invariance_guaranteed": false,
+          "heuristic_id": "vacuum_guard.v1",
+          "maximum_empty_slab_A": [
+            2.5,
+            2.5,
+            2.5
+          ],
+          "origin_translation_invariant": true,
+          "physical_dimensionality_classification": false,
+          "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+          "rule": "ordered_3d.v1",
+          "scope": "original_submission_only",
+          "stability_evidence": false,
+          "vacuum_limit_A": 10.0
+        },
+        "geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162",
+        "length_unit": "angstrom",
+        "magnetic_state": {
+          "kind": "nonmagnetic",
+          "moments": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "occupancy": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": null,
+        "pbc": [
+          true,
+          true,
+          true
+        ],
+        "positions": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.0,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ]
+        ],
+        "species": [
+          "Ar",
+          "Ar",
+          "Ar",
+          "Ar"
+        ],
+        "stage": "input",
+        "transformation": {
+          "basis_mapping": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "kind": "identity",
+          "site_mapping": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "input_status": "valid",
+      "item_id": "item-000000",
+      "reasons": [],
+      "source": "ideal_fcc.cif",
+      "status": "valid"
+    },
+    {
+      "atom_count": 2,
+      "file_sha256": "5b0a48067624fcc7306fe70c0e3e6f80c17abd1bd5142faddf8b2b2f269f1570",
+      "input_geometry": {
+        "cell": [
+          [
+            5.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            5.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            5.0
+          ]
+        ],
+        "coordinate_system": "fractional",
+        "domain_checks": {
+          "axis_permutation_invariant": true,
+          "diagonal_replication_invariant": true,
+          "general_unimodular_basis_invariance_guaranteed": false,
+          "heuristic_id": "vacuum_guard.v1",
+          "maximum_empty_slab_A": [
+            2.5,
+            2.5,
+            2.5
+          ],
+          "origin_translation_invariant": true,
+          "physical_dimensionality_classification": false,
+          "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+          "rule": "ordered_3d.v1",
+          "scope": "original_submission_only",
+          "stability_evidence": false,
+          "vacuum_limit_A": 10.0
+        },
+        "geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+        "length_unit": "angstrom",
+        "magnetic_state": {
+          "kind": "nonmagnetic",
+          "moments": [
+            0.0,
+            0.0
+          ]
+        },
+        "occupancy": [
+          1.0,
+          1.0
+        ],
+        "parent": null,
+        "pbc": [
+          true,
+          true,
+          true
+        ],
+        "positions": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "species": [
+          "Ar",
+          "Ar"
+        ],
+        "stage": "input",
+        "transformation": {
+          "basis_mapping": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "kind": "identity",
+          "site_mapping": [
+            0,
+            1
+          ]
+        }
+      },
+      "input_status": "valid",
+      "item_id": "item-000001",
+      "reasons": [],
+      "source": "ideal_bcc.cif",
+      "status": "valid"
+    }
+  ],
+  "submission_digest": "5d93829d360ca40ca29cf3a1f57495da2e0a7a9b913c0256352d87e20829d24e"
+}

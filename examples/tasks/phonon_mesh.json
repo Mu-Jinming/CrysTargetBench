@@ -1,0 +1,26 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.phonon.mesh",
+  "title": "谐声子网格判据示例：需固定采样协议",
+  "mode": "screen",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "phonon": {
+      "property_id": "phonon_mesh_min_frequency_THz",
+      "unit": "THz",
+      "required_fidelity": "protocol_default"
+    }
+  },
+  "report": [
+    "phonon"
+  ],
+  "constraints": [
+    {
+      "id": "sampled_stability",
+      "measurement": "phonon",
+      "operator": "ge",
+      "value": -0.001
+    }
+  ]
+}

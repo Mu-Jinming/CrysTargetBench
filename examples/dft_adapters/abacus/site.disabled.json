@@ -1,0 +1,53 @@
+{
+  "schema_version": "ctb.dft.site.v1",
+  "adapter": "abacus_example",
+  "method": {
+    "method_id": "user.abacus.pw.pbe.v1",
+    "effective_parameters": {
+      "xc": "PBE",
+      "basis": "pw",
+      "k_grid": [
+        4,
+        4,
+        4
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "cutoff_Ry": 80,
+      "spin": 1,
+      "soc": false,
+      "hubbard_u": {},
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "force_tolerance_eV_A": 0.005,
+      "stress_tolerance_GPa": 0.1
+    },
+    "software": [
+      {
+        "name": "ABACUS",
+        "version": "3.7.4"
+      }
+    ],
+    "asset_fingerprints": [
+      {
+        "kind": "pseudopotential",
+        "identifier": "Cu:USER_ASSET.upf",
+        "sha256": null
+      }
+    ]
+  },
+  "configuration": {
+    "assets": {
+      "Cu": {
+        "path": null,
+        "filename": "USER_ASSET.upf",
+        "sha256": null
+      }
+    }
+  },
+  "execution_mode": "external",
+  "managed": null
+}

@@ -1,0 +1,13 @@
+{
+  "software_candidate": "local_ready",
+  "user_paths": "passed",
+  "local_CI": "passed",
+  "hosted_CI": "not_run",
+  "owner_metadata": "missing; see OWNER_METADATA_TODO.md",
+  "publication": "unpublished",
+  "remote_created": false,
+  "pushes": 0,
+  "pypi_uploads": 0,
+  "scientific_leaderboard": "not_completed_not_claimed",
+  "delivery_presence": "verify DELIVERY_INDEX.json against actual files and delivery bundle; report paths alone are not attachments"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "ctb.dft.site.v1",
+  "adapter": "second_example",
+  "method": {
+    "method_id": "synthetic.preview.v1",
+    "effective_parameters": {
+      "xc": "PBE",
+      "basis": "pw",
+      "k_grid": [
+        2,
+        2,
+        2
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "cutoff_Ry": 80,
+      "spin": 1,
+      "soc": false,
+      "hubbard_u": {},
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "force_tolerance_eV_A": 0.02,
+      "stress_tolerance_GPa": 0.1
+    },
+    "software": [
+      {
+        "name": "analytic_test",
+        "version": "analytic-fixture-1"
+      }
+    ],
+    "asset_fingerprints": []
+  },
+  "configuration": {},
+  "execution_mode": "external",
+  "managed": null
+}

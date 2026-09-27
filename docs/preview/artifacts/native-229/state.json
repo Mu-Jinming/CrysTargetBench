@@ -1,0 +1,17 @@
+{
+  "run_digest": "13e2841402021449d0b60185c36aa2ed806c181a6629c86e9a3dc855faa4d6fe",
+  "stages": {
+    "item-000000:sg": {
+      "attempts": 0,
+      "computation_digest": "46be830d2c7c997573ac702e901cff6cf999bb7185a3356efc3b7be3a8b0313d",
+      "measurement_id": "9403fad3fa6938b900c0ab859f55332f486f2a1c67dc715ca3857fc97ce5715c",
+      "status": "completed"
+    },
+    "item-000001:sg": {
+      "attempts": 0,
+      "computation_digest": "b3563c6db07f054f88e1a21460dbbdbe165dec7cdffb43fb95e7463c8973ee46",
+      "measurement_id": "a6f064fed1521947fc8f2e21b0cc642b25b79820001765e3e532961f20c217b7",
+      "status": "completed"
+    }
+  }
+}

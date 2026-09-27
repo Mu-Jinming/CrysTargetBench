@@ -1,0 +1,54 @@
+{
+  "document_type": "CTB publication preparation metadata, not a runtime configuration or remote-write permit",
+  "user_confirmed": {
+    "repository_full_name": "Mu-Jinming/CrysTargetBench",
+    "repository_url": "https://github.com/Mu-Jinming/CrysTargetBench",
+    "publication_intent": "intends to publish CTB here"
+  },
+  "observed_remote": {
+    "checked_on": "2026-09-27",
+    "visibility": "public",
+    "default_branch": "main",
+    "head_sha": "4e02be03a35e8f7b3c950edbb4c8e999dd338356",
+    "root_entries": [
+      "LICENSE"
+    ],
+    "license_spdx": "MIT",
+    "copyright_notice": "Copyright (c) 2026 Jinming Mu",
+    "has_issues": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "private_vulnerability_reporting_enabled": null,
+    "checked_at_utc": "2026-09-27T03:45:57.148272+00:00",
+    "description": null,
+    "homepage": null,
+    "tags": [],
+    "releases": []
+  },
+  "observed_local_preview": {
+    "version": "0.3.2",
+    "source_archive_member": "source/CTB-0.3.2-public-source.zip",
+    "license_notice": "Copyright (c) 2026 CrysTargetBench contributors",
+    "citation_authors": null,
+    "citation_status": "draft"
+  },
+  "owner_decisions_remaining": {
+    "citation_authors_ordered": null,
+    "private_security_channel": null,
+    "final_copyright_notices_review": null
+  },
+  "next_codex_scope": "local preparation and read-only repository inspection; no automatic publication",
+  "local_candidate": {
+    "version": "0.3.3",
+    "plugin_versions": {
+      "abacus_example": "0.1.1",
+      "second_example": "0.1.1"
+    },
+    "status": "prepared_not_published",
+    "citation_status": "draft",
+    "copyright_resolution": "pending_owner_review",
+    "api_version": 1,
+    "wire_version": 2
+  },
+  "validation_evidence": "Run-specific checks are reported separately; this document records repository identity and unresolved owner decisions, not a test attestation."
+}

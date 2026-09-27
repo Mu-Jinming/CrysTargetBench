@@ -1,0 +1,118 @@
+{
+  "benchmark_eligible": false,
+  "comparability_digest": "943fad119ad49eefc34a7a466649bac00a478329b7d5e5ed3ec6cf9c4e9f50d2",
+  "constraints": {
+    "sg_target": {
+      "coverage": {
+        "definition": "Determined condition evaluations / all submitted items",
+        "denominator": 2,
+        "numerator": 2,
+        "status": "available",
+        "subset": "all_submitted",
+        "value": 1.0
+      },
+      "n_fail": 1,
+      "n_pass": 1,
+      "n_unknown": 0
+    }
+  },
+  "coverage": {
+    "sg": {
+      "definition": "Accepted observations / all submitted items",
+      "denominator": 2,
+      "numerator": 2,
+      "status": "available",
+      "subset": "all_submitted",
+      "value": 1.0
+    }
+  },
+  "determined_fraction": {
+    "definition": "(Pass + fail) / all submitted items",
+    "denominator": 2,
+    "numerator": 2,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 1.0
+  },
+  "distributions": {
+    "sg": {
+      "accepted_count": 2,
+      "definition": "Space group categories; each submitted item counts, including duplicates",
+      "histogram": {
+        "225": 1,
+        "229": 1
+      },
+      "kind": "categorical",
+      "observed_count": 2,
+      "sample_count": 2,
+      "status": "available",
+      "subset": "accepted_measurements"
+    }
+  },
+  "full_measurement_coverage": {
+    "definition": "Items with all requested observations accepted / all submitted items",
+    "denominator": 2,
+    "numerator": 2,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 1.0
+  },
+  "generation_cost": {
+    "definition": "Generator cost is outside the submitted-structure boundary",
+    "status": "unavailable",
+    "value": null
+  },
+  "joint_determined_fraction": {
+    "definition": "(Pass + fail) / all submitted items",
+    "denominator": 2,
+    "numerator": 2,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 1.0
+  },
+  "mode": "screen",
+  "n_fail": 1,
+  "n_input_invalid": 0,
+  "n_input_unsupported": 0,
+  "n_input_valid": 2,
+  "n_pass": 1,
+  "n_submitted": 2,
+  "n_unknown": 0,
+  "novelty": {
+    "definition": "No validated reference library was provided",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "pass_fraction_determined": {
+    "definition": "Pass / (pass + fail)",
+    "denominator": 2,
+    "numerator": 1,
+    "status": "available",
+    "subset": "determined_items",
+    "value": 0.5
+  },
+  "schema_version": "ctb.metrics.v1",
+  "submission_digest": "5d93829d360ca40ca29cf3a1f57495da2e0a7a9b913c0256352d87e20829d24e",
+  "sun": {
+    "definition": "SUN requires a defined, versioned reference library",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "task_id": "example.sg225",
+  "unknown_fraction": {
+    "definition": "Unknown / all submitted items",
+    "denominator": 2,
+    "numerator": 0,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.0
+  },
+  "verified_yield": {
+    "definition": "Pass / all submitted items",
+    "denominator": 2,
+    "numerator": 1,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.5
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "adapter": {
+    "id": "abacus_example.v1",
+    "version": "0.1.1"
+  },
+  "adapter_api_version": 1,
+  "dependencies": [],
+  "execution_mode": "external",
+  "geometry": {
+    "cell": [
+      [
+        5.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "coordinate_system": "fractional",
+    "domain_checks": {
+      "axis_permutation_invariant": true,
+      "diagonal_replication_invariant": true,
+      "general_unimodular_basis_invariance_guaranteed": false,
+      "heuristic_id": "vacuum_guard.v1",
+      "maximum_empty_slab_A": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "origin_translation_invariant": true,
+      "physical_dimensionality_classification": false,
+      "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+      "rule": "ordered_3d.v1",
+      "scope": "original_submission_only",
+      "stability_evidence": false,
+      "vacuum_limit_A": 10.0
+    },
+    "geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162",
+    "length_unit": "angstrom",
+    "magnetic_state": {
+      "kind": "nonmagnetic",
+      "moments": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "occupancy": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "parent": null,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.0,
+        0.5
+      ],
+      [
+        0.5,
+        0.5,
+        0.0
+      ]
+    ],
+    "species": [
+      "Ar",
+      "Ar",
+      "Ar",
+      "Ar"
+    ],
+    "stage": "input",
+    "transformation": {
+      "basis_mapping": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "kind": "identity",
+      "site_mapping": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "method": {
+    "asset_fingerprints": [
+      {
+        "identifier": "Ar:USER_ASSET.upf",
+        "kind": "pseudopotential",
+        "sha256": "6a1398c6c37da28dbbb961bad36f6c0f52a7e76595183c808422ef1c71429712"
+      }
+    ],
+    "effective_parameters": {
+      "basis": "pw",
+      "cutoff_Ry": 80,
+      "force_tolerance_eV_A": 0.005,
+      "hubbard_u": {},
+      "k_grid": [
+        4,
+        4,
+        4
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "soc": false,
+      "spin": 1,
+      "stress_tolerance_GPa": 0.1,
+      "xc": "PBE"
+    },
+    "method_id": "user.abacus.pw.pbe.v1",
+    "software": [
+      {
+        "name": "ABACUS",
+        "version": "3.7.4"
+      }
+    ]
+  },
+  "method_digest": "51b31c40211f0fbaf8e6f6982e970cb07a50793cb13cccdeccb6f86d0b93efef",
+  "operation": "relaxation",
+  "recipe": {
+    "id": "ctb.external.relaxation.v2",
+    "parameters": {}
+  },
+  "request_digest": "8867ea80581b3e781702ce822941f8116723b076b91d0f799e380021f6fbc692",
+  "request_id": "8867ea80581b3e781702ce822941f8116723b076b91d0f799e380021f6fbc692",
+  "requested_quantities": [
+    "energy",
+    "forces",
+    "relaxed_geometry",
+    "stress"
+  ],
+  "sample_geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162",
+  "sampling": {},
+  "schema_version": "ctb.dft.request.v2"
+}

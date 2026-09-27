@@ -1,0 +1,24 @@
+INPUT_PARAMETERS
+suffix CTB
+calculation cell-relax
+basis_type pw
+ntype 1
+dft_functional PBE
+nspin 1
+noncolin 0
+lspinorb 0
+symmetry 0
+ecutwfc 80
+scf_thr 1e-08
+scf_nmax 200
+occupations fixed
+cal_force 1
+cal_stress 1
+out_stru 1
+force_thr_ev 0.005
+stress_thr 1.0
+pseudo_dir ./assets
+stru_file STRU
+kpoint_file KPT
+relax_nmax 200
+relax_method bfgs

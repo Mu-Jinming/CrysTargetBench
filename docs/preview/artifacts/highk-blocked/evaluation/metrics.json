@@ -1,0 +1,181 @@
+{
+  "benchmark_eligible": false,
+  "constraints": {
+    "gap_gate": {
+      "coverage": {
+        "definition": "Determined condition evaluations / all submitted items",
+        "denominator": 4,
+        "numerator": 0,
+        "status": "available",
+        "subset": "all_submitted",
+        "value": 0.0
+      },
+      "n_fail": 0,
+      "n_pass": 0,
+      "n_unknown": 4
+    },
+    "kappa_gate": {
+      "coverage": {
+        "definition": "Determined condition evaluations / all submitted items",
+        "denominator": 4,
+        "numerator": 0,
+        "status": "available",
+        "subset": "all_submitted",
+        "value": 0.0
+      },
+      "n_fail": 0,
+      "n_pass": 0,
+      "n_unknown": 4
+    },
+    "phonon_gate": {
+      "coverage": {
+        "definition": "Determined condition evaluations / all submitted items",
+        "denominator": 4,
+        "numerator": 0,
+        "status": "available",
+        "subset": "all_submitted",
+        "value": 0.0
+      },
+      "n_fail": 0,
+      "n_pass": 0,
+      "n_unknown": 4
+    }
+  },
+  "coverage": {
+    "gap": {
+      "definition": "Accepted observations / all submitted items",
+      "denominator": 4,
+      "numerator": 0,
+      "status": "available",
+      "subset": "all_submitted",
+      "value": 0.0
+    },
+    "kappa": {
+      "definition": "Accepted observations / all submitted items",
+      "denominator": 4,
+      "numerator": 0,
+      "status": "available",
+      "subset": "all_submitted",
+      "value": 0.0
+    },
+    "phonon": {
+      "definition": "Accepted observations / all submitted items",
+      "denominator": 4,
+      "numerator": 0,
+      "status": "available",
+      "subset": "all_submitted",
+      "value": 0.0
+    }
+  },
+  "determined_fraction": {
+    "definition": "(Pass + fail) / all submitted items",
+    "denominator": 4,
+    "numerator": 0,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.0
+  },
+  "distributions": {
+    "gap": {
+      "accepted_count": 0,
+      "definition": "Finite accepted scalar observations; no imputation or deduplication",
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "minimum": null,
+      "observed_count": 0,
+      "sample_count": 0,
+      "status": "unavailable",
+      "subset": "accepted_measurements"
+    },
+    "kappa": {
+      "accepted_count": 0,
+      "definition": "Finite accepted scalar observations; no imputation or deduplication",
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "minimum": null,
+      "observed_count": 0,
+      "sample_count": 0,
+      "status": "unavailable",
+      "subset": "accepted_measurements"
+    },
+    "phonon": {
+      "accepted_count": 0,
+      "definition": "Finite accepted scalar observations; no imputation or deduplication",
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "minimum": null,
+      "observed_count": 0,
+      "sample_count": 0,
+      "status": "unavailable",
+      "subset": "accepted_measurements"
+    }
+  },
+  "full_measurement_coverage": {
+    "definition": "Items with all requested observations accepted / all submitted items",
+    "denominator": 4,
+    "numerator": 0,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.0
+  },
+  "generation_cost": {
+    "definition": "Generator cost is outside the submitted-structure boundary",
+    "status": "unavailable",
+    "value": null
+  },
+  "joint_determined_fraction": {
+    "definition": "(Pass + fail) / all submitted items",
+    "denominator": 4,
+    "numerator": 0,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.0
+  },
+  "mode": "screen",
+  "n_fail": 0,
+  "n_input_invalid": 1,
+  "n_input_unsupported": 0,
+  "n_input_valid": 3,
+  "n_pass": 0,
+  "n_submitted": 4,
+  "n_unknown": 4,
+  "novelty": {
+    "definition": "No validated reference library was provided",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "pass_fraction_determined": {
+    "definition": "Pass / (pass + fail)",
+    "denominator": 0,
+    "numerator": 0,
+    "status": "undefined_zero_denominator",
+    "subset": "determined_items",
+    "value": null
+  },
+  "schema_version": "ctb.metrics.v1",
+  "sun": {
+    "definition": "SUN requires a defined, versioned reference library",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "task_id": "example.highk.dft.screen",
+  "unknown_fraction": {
+    "definition": "Unknown / all submitted items",
+    "denominator": 4,
+    "numerator": 4,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 1.0
+  },
+  "verified_yield": {
+    "definition": "Pass / all submitted items",
+    "denominator": 4,
+    "numerator": 0,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.0
+  }
+}

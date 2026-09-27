@@ -1,0 +1,25 @@
+{
+  "benchmark_eligible": false,
+  "budget_enforced_by_ctb": false,
+  "ctb_engine_invocations": 0,
+  "execution_mode": "external",
+  "external_engine_invocations": null,
+  "external_wall_seconds": null,
+  "item_states": {
+    "item-000000": {
+      "gate": "prerequisite_unknown",
+      "reference_geometry_id": null
+    }
+  },
+  "managed_ledger_modified": false,
+  "n_submitted": 1,
+  "next_actions": [
+    "execute prepared requests externally, then collect"
+  ],
+  "pending_request_ids": [
+    "8867ea80581b3e781702ce822941f8116723b076b91d0f799e380021f6fbc692"
+  ],
+  "schema_version": "ctb.external_evaluation.v1",
+  "science_validated": false,
+  "status": "awaiting_results"
+}

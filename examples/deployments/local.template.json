@@ -1,0 +1,74 @@
+{
+  "schema_version": "ctb.deployment.v3",
+  "deployment_id": "example.local.unconfigured",
+  "default_policy": "auto_mlff_preferred",
+  "default_mlff_provider": "mattersim",
+  "default_dft_provider": null,
+  "providers": {
+    "symmetry": {
+      "family": "native",
+      "adapter_id": "ctb.native.spglib",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {},
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "space_group"
+      ]
+    },
+    "mattersim": {
+      "family": "mlff",
+      "adapter_id": "ctb.ase.mattersim",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {
+        "checkpoint": {
+          "path": null,
+          "sha256": null,
+          "license_status": "site_managed_unresolved"
+        }
+      },
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "energy",
+        "forces",
+        "stress"
+      ]
+    },
+    "alignn2": {
+      "family": "surrogate",
+      "adapter_id": "ctb.surrogate.alignn2",
+      "configured": false,
+      "worker_argv": [],
+      "version": null,
+      "assets": {
+        "checkpoint": {
+          "path": null,
+          "sha256": null,
+          "license_status": "site_managed_unresolved"
+        }
+      },
+      "parameter_set_id": null,
+      "reported_capabilities": [
+        "band_gap_prediction"
+      ]
+    }
+  },
+  "paths": {
+    "runs_root": "./runs",
+    "cache_root": "./.ctb/cache",
+    "assets_root": "./.ctb/assets"
+  },
+  "execution": {
+    "network_downloads_allowed": false,
+    "mlff_authorized": false,
+    "dft_authorized": false,
+    "max_dft_jobs": 0,
+    "max_concurrent_jobs": 1,
+    "per_job_wall_seconds": 3600,
+    "max_supercell_atoms": 256,
+    "executor": "local"
+  }
+}

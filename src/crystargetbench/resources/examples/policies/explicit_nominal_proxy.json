@@ -1,0 +1,18 @@
+{
+  "schema_version": "ctb.method_policy.v2",
+  "mode": "hybrid",
+  "preferred_mlff": "mattersim",
+  "preferred_dft": "vasp_atomate2",
+  "promotion_scope": "joint_geometry_group",
+  "promote_on_missing_capability": false,
+  "promote_on_missing_installation": false,
+  "on_runtime_failure": "record_failure",
+  "allow_surrogates": true,
+  "overrides": {
+    "geometry": "mlff:mattersim",
+    "phonon": "mlff:mattersim",
+    "gap": "surrogate:alignn2",
+    "kappa": "mlff:mattersim"
+  },
+  "warm_start": "none"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.bulk.voigt.ge100",
+  "title": "Voigt模量不低于100GPa；不得用EOS回退",
+  "mode": "screen",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "bulk": {
+      "property_id": "bulk_modulus_voigt_GPa",
+      "unit": "GPa",
+      "required_fidelity": "protocol_default"
+    }
+  },
+  "report": [
+    "bulk"
+  ],
+  "constraints": [
+    {
+      "id": "bulk_min",
+      "measurement": "bulk",
+      "operator": "ge",
+      "value": 100.0
+    }
+  ]
+}

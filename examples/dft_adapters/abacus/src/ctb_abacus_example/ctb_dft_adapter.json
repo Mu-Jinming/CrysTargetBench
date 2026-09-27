@@ -1,0 +1,85 @@
+{
+  "schema_version": "ctb.dft.adapter_manifest.v1",
+  "api_version": 1,
+  "provider_id": "abacus_example",
+  "adapter_id": "abacus_example.v1",
+  "adapter_version": "0.1.1",
+  "distribution": "ctb-abacus-example",
+  "family": "dft",
+  "science_validated": false,
+  "benchmark_eligible": false,
+  "capabilities": [
+    {
+      "quantity": "energy",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "3.7.4"
+      ],
+      "restrictions": [
+        "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+      ]
+    },
+    {
+      "quantity": "forces",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "3.7.4"
+      ],
+      "restrictions": [
+        "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+      ]
+    },
+    {
+      "quantity": "stress",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "3.7.4"
+      ],
+      "restrictions": [
+        "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+      ]
+    },
+    {
+      "quantity": "relaxed_geometry",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "3.7.4"
+      ],
+      "restrictions": [
+        "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+      ]
+    },
+    {
+      "quantity": "eigenvalues",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "3.7.4"
+      ],
+      "restrictions": [
+        "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+      ]
+    },
+    {
+      "quantity": "occupations",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "3.7.4"
+      ],
+      "restrictions": [
+        "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+      ]
+    }
+  ]
+}

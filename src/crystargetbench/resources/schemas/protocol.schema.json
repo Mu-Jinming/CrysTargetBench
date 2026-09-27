@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "ctb.protocol_candidate.v2"
+    },
+    "protocol_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "candidate"
+    },
+    "benchmark_eligible": {
+      "const": false
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_domain": {
+      "const": "3d_ordered_full_occupancy"
+    },
+    "reference_geometry": {
+      "enum": [
+        "input",
+        "relaxed"
+      ]
+    },
+    "parameters": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "required_resolutions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "validation_status": {
+      "const": "not_scientifically_validated"
+    }
+  },
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "status",
+    "benchmark_eligible",
+    "purpose",
+    "input_domain",
+    "reference_geometry",
+    "parameters",
+    "required_resolutions",
+    "validation_status"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "parameters is a recipe-specific typed payload. Runtime adapters MUST further validate all keys and finite numbers. This candidate schema does not authorize physics execution."
+}

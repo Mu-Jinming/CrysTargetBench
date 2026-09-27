@@ -1,0 +1,386 @@
+{
+  "request_digest": "96146b733eb70a18c355c2207bbc7be1f756d9d983a37f2e763f88d3bc95cb38",
+  "method": {
+    "asset_fingerprints": [],
+    "effective_parameters": {
+      "basis": "pw",
+      "cutoff_Ry": 80,
+      "force_tolerance_eV_A": 0.02,
+      "hubbard_u": {},
+      "k_grid": [
+        2,
+        2,
+        2
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "soc": false,
+      "spin": 1,
+      "stress_tolerance_GPa": 0.1,
+      "xc": "PBE"
+    },
+    "method_id": "synthetic.preview.v1",
+    "software": [
+      {
+        "name": "analytic_test",
+        "version": "analytic-fixture-1"
+      }
+    ]
+  },
+  "observed_geometry": {
+    "cell": [
+      [
+        5.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "coordinate_system": "fractional",
+    "domain_checks": {
+      "axis_permutation_invariant": true,
+      "diagonal_replication_invariant": true,
+      "general_unimodular_basis_invariance_guaranteed": false,
+      "heuristic_id": "vacuum_guard.v1",
+      "maximum_empty_slab_A": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "origin_translation_invariant": true,
+      "physical_dimensionality_classification": false,
+      "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+      "rule": "ordered_3d.v1",
+      "scope": "original_submission_only",
+      "stability_evidence": false,
+      "vacuum_limit_A": 10.0
+    },
+    "geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+    "length_unit": "angstrom",
+    "magnetic_state": {
+      "kind": "nonmagnetic",
+      "moments": [
+        0.0,
+        0.0
+      ]
+    },
+    "occupancy": [
+      1.0,
+      1.0
+    ],
+    "parent": null,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "species": [
+      "Ar",
+      "Ar"
+    ],
+    "stage": "input",
+    "transformation": {
+      "basis_mapping": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "kind": "identity",
+      "site_mapping": [
+        0,
+        1
+      ]
+    }
+  },
+  "scf": true,
+  "ionic": null,
+  "response": null,
+  "observations": {
+    "eigenvalues": {
+      "value": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ]
+      ],
+      "diagnostics": {
+        "sampling_manifest_digest": "ffe5dd68244c332627d4300053c15e160400636a80ca570969095308c99b0da4",
+        "coordinate_convention": "fractional_reciprocal_row_vectors_include_2pi",
+        "reciprocal_basis_Ainv": [
+          [
+            1.2566370614359172,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.2566370614359172,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2566370614359172
+          ]
+        ],
+        "kpoint_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sampling": "uniform_mesh",
+        "kpoints": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "weights": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ],
+        "spin_channels": 1,
+        "maximum_occupation": 2,
+        "occupation_tolerance": 1e-06,
+        "occupation_convention": "per_state_unweighted"
+      }
+    },
+    "occupations": {
+      "value": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ]
+      ],
+      "diagnostics": {
+        "sampling_manifest_digest": "ffe5dd68244c332627d4300053c15e160400636a80ca570969095308c99b0da4",
+        "coordinate_convention": "fractional_reciprocal_row_vectors_include_2pi",
+        "reciprocal_basis_Ainv": [
+          [
+            1.2566370614359172,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.2566370614359172,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2566370614359172
+          ]
+        ],
+        "kpoint_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sampling": "uniform_mesh",
+        "kpoints": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "weights": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ],
+        "spin_channels": 1,
+        "maximum_occupation": 2,
+        "occupation_tolerance": 1e-06,
+        "occupation_convention": "per_state_unweighted"
+      }
+    }
+  }
+}

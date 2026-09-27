@@ -1,0 +1,33 @@
+{
+  "benchmark_eligible": false,
+  "budget_enforced_by_ctb": false,
+  "ctb_engine_invocations": 0,
+  "execution_mode": "external",
+  "external_engine_invocations": null,
+  "external_wall_seconds": null,
+  "item_states": {
+    "item-000000": {
+      "gate": null,
+      "reference_geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162"
+    },
+    "item-000001": {
+      "gate": null,
+      "reference_geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f"
+    },
+    "item-000002": {
+      "gate": null,
+      "reference_geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162"
+    },
+    "item-000003": {
+      "gate": "prerequisite_unknown",
+      "reference_geometry_id": null
+    }
+  },
+  "managed_ledger_modified": false,
+  "n_submitted": 4,
+  "next_actions": [],
+  "pending_request_ids": [],
+  "schema_version": "ctb.external_evaluation.v1",
+  "science_validated": false,
+  "status": "completed"
+}

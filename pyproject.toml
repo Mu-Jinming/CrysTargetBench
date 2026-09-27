@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools==75.8.2", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crystargetbench"
+dynamic = ["version"]
+description = "Independent structure-to-task assessment with explicit scientific provenance"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.26.4,<3", "ase==3.26.0", "spglib==2.6.0", "jsonschema==4.23.0"]
+
+[project.urls]
+Homepage = "https://github.com/Mu-Jinming/CrysTargetBench"
+Repository = "https://github.com/Mu-Jinming/CrysTargetBench"
+Issues = "https://github.com/Mu-Jinming/CrysTargetBench/issues"
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5", "build==1.2.2.post1", "setuptools==75.8.2", "wheel==0.45.1"]
+numerical = ["phonopy==2.38.2", "seekpath==2.1.0", "scipy==1.17.1"]
+mlff = ["mattersim==1.1.2", "numpy==1.26.4", "phonopy==2.38.2", "seekpath==2.1.0", "scipy==1.17.1"]
+dft = [] # Compatibility extra: engines and adapters are installed separately.
+export = ["PyYAML==6.0.3"]
+
+[project.scripts]
+ctb = "crystargetbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "crystargetbench.__version__"}
+
+[tool.setuptools.package-data]
+crystargetbench = ["resources/**/*.json", "resources/**/*.cif"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -m 'not integration_mlff and not integration_dft and not legacy'"
+markers = ["native: real CPU structure/symmetry integration", "cleanroom: installed-wheel isolation", "integration_mlff: opt-in authorized real MLFF", "integration_dft: opt-in authorized real DFT", "legacy: optional explicit historical bundle"]

@@ -1,0 +1,118 @@
+{
+  "benchmark_eligible": false,
+  "comparability_digest": "2f7cacc3754c858e922a8f7341d53e6da134ed95f08ccc2ef6cd495043d8159f",
+  "constraints": {
+    "example_gap": {
+      "coverage": {
+        "definition": "Determined condition evaluations / all submitted items",
+        "denominator": 4,
+        "numerator": 3,
+        "status": "available",
+        "subset": "all_submitted",
+        "value": 0.75
+      },
+      "n_fail": 0,
+      "n_pass": 3,
+      "n_unknown": 1
+    }
+  },
+  "coverage": {
+    "gap": {
+      "definition": "Accepted observations / all submitted items",
+      "denominator": 4,
+      "numerator": 3,
+      "status": "available",
+      "subset": "all_submitted",
+      "value": 0.75
+    }
+  },
+  "determined_fraction": {
+    "definition": "(Pass + fail) / all submitted items",
+    "denominator": 4,
+    "numerator": 3,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.75
+  },
+  "distributions": {
+    "gap": {
+      "accepted_count": 3,
+      "definition": "Finite accepted scalar observations; no imputation or deduplication",
+      "maximum": 3.0,
+      "mean": 3.0,
+      "median": 3.0,
+      "minimum": 3.0,
+      "observed_count": 3,
+      "sample_count": 3,
+      "status": "available",
+      "subset": "accepted_measurements"
+    }
+  },
+  "full_measurement_coverage": {
+    "definition": "Items with all requested observations accepted / all submitted items",
+    "denominator": 4,
+    "numerator": 3,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.75
+  },
+  "generation_cost": {
+    "definition": "Generator cost is outside the submitted-structure boundary",
+    "status": "unavailable",
+    "value": null
+  },
+  "joint_determined_fraction": {
+    "definition": "(Pass + fail) / all submitted items",
+    "denominator": 4,
+    "numerator": 3,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.75
+  },
+  "mode": "screen",
+  "n_fail": 0,
+  "n_input_invalid": 1,
+  "n_input_unsupported": 0,
+  "n_input_valid": 3,
+  "n_pass": 3,
+  "n_submitted": 4,
+  "n_unknown": 1,
+  "novelty": {
+    "definition": "No validated reference library was provided",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "pass_fraction_determined": {
+    "definition": "Pass / (pass + fail)",
+    "denominator": 3,
+    "numerator": 3,
+    "status": "available",
+    "subset": "determined_items",
+    "value": 1.0
+  },
+  "protocol_digest": "a61fac7a91ec8124543ae499f7bfd121b48733efd3a4df681f519507db3657fe",
+  "schema_version": "ctb.metrics.v1",
+  "submission_digest": "15e28b6767d0c54714ac5b95f071a13c857f0307cdd8cf2d7e470223ff94faab",
+  "sun": {
+    "definition": "SUN requires a defined, versioned reference library",
+    "status": "unavailable_reference_library",
+    "value": null
+  },
+  "task_id": "synthetic.preview.gap",
+  "unknown_fraction": {
+    "definition": "Unknown / all submitted items",
+    "denominator": 4,
+    "numerator": 1,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.25
+  },
+  "verified_yield": {
+    "definition": "Pass / all submitted items",
+    "denominator": 4,
+    "numerator": 3,
+    "status": "available",
+    "subset": "all_submitted",
+    "value": 0.75
+  }
+}

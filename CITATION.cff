@@ -1,0 +1,10 @@
+# Draft metadata: confirmed author identities/DOI must be supplied by the owner.
+# They are intentionally not invented; this draft is not claimed CFF-schema-valid.
+cff-version: 1.2.0
+message: "Please cite CrysTargetBench, version 0.3.3, candidate software. Author metadata pending owner confirmation."
+title: CrysTargetBench
+version: 0.3.3
+type: software
+license: MIT
+repository-code: "https://github.com/Mu-Jinming/CrysTargetBench"
+url: "https://github.com/Mu-Jinming/CrysTargetBench"

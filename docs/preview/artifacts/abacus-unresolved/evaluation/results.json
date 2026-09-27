@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "constraints": [],
+      "decision": null,
+      "input_status": "valid",
+      "item_id": "item-000000",
+      "measurement_eligibility": {
+        "gap": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      },
+      "measurements": {},
+      "reference_geometry": null,
+      "reference_geometry_id": null
+    }
+  ]
+}

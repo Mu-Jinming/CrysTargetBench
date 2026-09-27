@@ -1,0 +1,50 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.highk.dft.screen",
+  "title": "正式total响应DFT任务示例：阈值并非已验证标准",
+  "mode": "screen",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "phonon": {
+      "property_id": "phonon_mesh_min_frequency_THz",
+      "unit": "THz",
+      "required_fidelity": "dft"
+    },
+    "gap": {
+      "property_id": "band_gap_eV",
+      "unit": "eV",
+      "required_fidelity": "dft"
+    },
+    "kappa": {
+      "property_id": "dielectric_total_static_trace_over3",
+      "unit": "1",
+      "required_fidelity": "dft"
+    }
+  },
+  "report": [
+    "phonon",
+    "gap",
+    "kappa"
+  ],
+  "constraints": [
+    {
+      "id": "phonon_gate",
+      "measurement": "phonon",
+      "operator": "ge",
+      "value": -0.001
+    },
+    {
+      "id": "gap_gate",
+      "measurement": "gap",
+      "operator": "gt",
+      "value": 2.0
+    },
+    {
+      "id": "kappa_gate",
+      "measurement": "kappa",
+      "operator": "ge",
+      "value": 20.0
+    }
+  ]
+}

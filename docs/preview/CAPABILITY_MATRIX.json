@@ -1,0 +1,100 @@
+{
+  "version": "0.3.2",
+  "evidence": [
+    "USER_JOURNEY_RESULTS.json",
+    "TEST_RESULTS.json"
+  ],
+  "historical_source": "original docs/s2b/live-20260925-host/CTB_S2B_BACKEND_STATUS.json (workspace evidence, not distributed)",
+  "historical_source_sha256": "e736e48858d92b2fe0a22226a91699a5f1377d77fe447d8b7f272c7b1a04ece9",
+  "rows": [
+    {
+      "capability": "native space group",
+      "installed_in_preview_environment": true,
+      "contract_tested": true,
+      "numerical_tested": "actual ASE/spglib coordinate analysis",
+      "historical_live": "previous native records retained",
+      "current_live": "actual CPU native only",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "U01\u2013U04: 225/229, full N=4 with duplicate/invalid, target-only compatible cache reuse"
+    },
+    {
+      "capability": "MatterSim relaxation / phonon / EOS",
+      "installed_in_preview_environment": false,
+      "contract_tested": true,
+      "numerical_tested": "analytic_test regressions passed",
+      "historical_live": "specific S2-B host batch only; original records retained, not bundled",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "No current model installed/loaded. Existing worker/recipes and R1\u2013R3 regression remain; historical live does not validate this version in arbitrary environments."
+    },
+    {
+      "capability": "generic DFT prepare / collect",
+      "installed_in_preview_environment": true,
+      "contract_tested": true,
+      "numerical_tested": "data validation/reduction, not DFT",
+      "historical_live": "not_claimed",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "U05/U06: separate plugins, API 1 / wire v2, staged synthetic collection, missing/invalid/conflicting batches"
+    },
+    {
+      "capability": "ABACUS basic parser",
+      "installed_in_preview_environment": true,
+      "contract_tested": true,
+      "numerical_tested": "synthetic authored fragments only",
+      "historical_live": "no genuine reference fixture",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "Adapter 0.1.1 only, not engine installation. PW/PBE/nonmagnetic candidate profile. U06 missing user assets remain blocked_assets; no assets created."
+    },
+    {
+      "capability": "full-mesh electronic gap",
+      "installed_in_preview_environment": true,
+      "contract_tested": true,
+      "numerical_tested": "synthetic eigenvalue/occupation arithmetic",
+      "historical_live": "not_claimed",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "Bound grid/shift/basis/row coverage; incomplete rows rejected; no physical gap accuracy claim."
+    },
+    {
+      "capability": "irreducible electronic grid",
+      "installed_in_preview_environment": false,
+      "contract_tested": true,
+      "numerical_tested": false,
+      "historical_live": "not_claimed",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "Explicitly unsupported; no verified expansion implementation."
+    },
+    {
+      "capability": "generic High-K response contract",
+      "installed_in_preview_environment": true,
+      "contract_tested": true,
+      "numerical_tested": "synthetic contract data only",
+      "historical_live": "not_claimed",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "A capable third-party plugin may provide real response with all required quality/provenance; the SDK does not manufacture missing tensors."
+    },
+    {
+      "capability": "ABACUS complete High-K",
+      "installed_in_preview_environment": false,
+      "contract_tested": true,
+      "numerical_tested": false,
+      "historical_live": "not_claimed",
+      "current_live": "not_run",
+      "science_validated": false,
+      "benchmark_eligible": false,
+      "scope": "U07 blocked_capability, N=4 unknown=4 fail=0, no nominal or ML proxy; electric response/direct spectrum missing."
+    }
+  ],
+  "science_validated": false
+}

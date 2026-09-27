@@ -1,0 +1,138 @@
+{
+  "python": "3.11.13 (main, Sep 18 2025, 19:46:39) [Clang 20.1.4 ]",
+  "platform": "Linux-5.4.0-216-generic-x86_64-with-glibc2.31",
+  "packages": {
+    "six": {
+      "version": "1.17.0",
+      "record_sha256": "b4da9e24e598662bf65a3e2314bf54cb7d88a8cb29e42b5dfcb50d6bb746b777"
+    },
+    "contourpy": {
+      "version": "1.3.3",
+      "record_sha256": "f64770812b948e954eeb76f82c937bc5133fdd72026b30501e6a15d91c322189"
+    },
+    "fonttools": {
+      "version": "4.66.0",
+      "record_sha256": "665c242458131748847baf423b298366c471f1e582181a5ecf5998d6e33daaac"
+    },
+    "phonopy": {
+      "version": "2.38.2",
+      "record_sha256": "020e53cdf6c1f15ccf666a8e9fa909998295faf0e5201bd04a03dda25207c43d"
+    },
+    "pytest": {
+      "version": "8.3.5",
+      "record_sha256": "c7f96c11c35d451f5a189be680a2bac8114dac3d4a075e5609c682cb60300045"
+    },
+    "packaging": {
+      "version": "26.3",
+      "record_sha256": "194236f63fa503ef6bc832807d7f1a28f6b8c645a208880d557244ef4941adbc"
+    },
+    "rpds-py": {
+      "version": "2026.6.3",
+      "record_sha256": "e13d7b7a4be5afc24787b030379e5be599a40e2e3f4aae3c025ece21444fc128"
+    },
+    "symfc": {
+      "version": "1.7.3",
+      "record_sha256": "dee5e5a3eba6471c371d03ddcee7c2db1f3e897d19131c0f9d38a1572b6c47eb"
+    },
+    "pillow": {
+      "version": "12.3.0",
+      "record_sha256": "d67571156a1abfdcb25fbb895cdd005a3d59c4d1a9c11f253febdd84419d1e93"
+    },
+    "jsonschema-specifications": {
+      "version": "2025.9.1",
+      "record_sha256": "a9628ff8294efc8a627c0ca5d4d38500d8609ef893a73a554c164e12bd0c1243"
+    },
+    "ase": {
+      "version": "3.26.0",
+      "record_sha256": "bb3d52189d4c77375a569180ff102f35c2380212d53929e44046d07e5291fce7"
+    },
+    "iniconfig": {
+      "version": "2.3.0",
+      "record_sha256": "60cf1998a07c4c4d314d586130c9caba025b3caf655b5260716ddc3a54262c7a"
+    },
+    "seekpath": {
+      "version": "2.1.0",
+      "record_sha256": "da2ae89d08bf2ddc174d31496a3758ce83882eafda2c5d841b7e2bc54b5b9ad4"
+    },
+    "crystargetbench": {
+      "version": "0.3.2",
+      "record_sha256": "b70cc995b01f214a762293ce78c8778cc9c7a1ac7c3826017be0739af691df1b"
+    },
+    "typing_extensions": {
+      "version": "4.16.0",
+      "record_sha256": "bef8a87e9866f1a161c8eb7a1b1c1af3a2d81b6cecf39368228972c0078d1988"
+    },
+    "pluggy": {
+      "version": "1.6.0",
+      "record_sha256": "ac3c42a936c786b42b92f6c5310ed48f760330718f071c3c4c31855a1717544b"
+    },
+    "jsonschema": {
+      "version": "4.23.0",
+      "record_sha256": "b6a7fe02fae13781297bdcb5edfb17a2a15bc0aea476b385075576e693ef6c07"
+    },
+    "PyYAML": {
+      "version": "6.0.3",
+      "record_sha256": "3efd8ec23b67624d3d7d73a64da994e3293f6c8412b53879565e7226aac42d45"
+    },
+    "spglib": {
+      "version": "2.6.0",
+      "record_sha256": "71c6250a2e0fc5537f140842b4a7c3c8f30d8b40c4c0e11a4e89ab6cc4ace61e"
+    },
+    "setuptools": {
+      "version": "65.5.0",
+      "record_sha256": "7cb487a46647dde6c36180af0bb59ca831ef95aed8da35e8f9cf68ae0d1c2d39"
+    },
+    "kiwisolver": {
+      "version": "1.5.1",
+      "record_sha256": "026de1a2707ce8f1e3fe8d90ad0e3c2e837ff2c0b4a00b4e866fc80dfca35c0a"
+    },
+    "pip": {
+      "version": "24.0",
+      "record_sha256": "40bf1297bdf31bdd3d1b6e5807951b9240e745aed3cd11bf75924f06ca681a5b"
+    },
+    "h5py": {
+      "version": "3.16.0",
+      "record_sha256": "a054cdc56960f6ed658c18e4f27e3746f00839c29b29d981a087e086d02bb985"
+    },
+    "pyparsing": {
+      "version": "3.3.3",
+      "record_sha256": "c4acc104075f051ef5cdbf737bb7c31190df3e9e75c3689f191f14760a29486f"
+    },
+    "ctb-abacus-example": {
+      "version": "0.1.1",
+      "record_sha256": "de7e029423b8e272d4da34476dfa7c37c464f441f930e83e548508ac8c93b3ff"
+    },
+    "ctb-second-example": {
+      "version": "0.1.1",
+      "record_sha256": "f9ec6d8d7d6460a127e057f9488fc233e2cc09670eccb523d45ae916e1e6c99e"
+    },
+    "scipy": {
+      "version": "1.17.1",
+      "record_sha256": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4"
+    },
+    "python-dateutil": {
+      "version": "2.9.0.post0",
+      "record_sha256": "ea009219f435165e7013386035f57b84d75e0676dec16cefcf99db3310324aa2"
+    },
+    "matplotlib": {
+      "version": "3.11.2",
+      "record_sha256": "3d65cd7506f2e7559ab94be561e7eb01c8c5c2d285f01dfceb7c8c672163edd6"
+    },
+    "referencing": {
+      "version": "0.37.0",
+      "record_sha256": "dec74300561a47a0d28ec39371da5c952d4b0bb713aa6529694b6a6b52ec4060"
+    },
+    "numpy": {
+      "version": "2.2.6",
+      "record_sha256": "660eb04d966c51192c975dd63d9a86cd75e223213f0dd2f3cb3bd6e8c55732ec"
+    },
+    "cycler": {
+      "version": "0.12.1",
+      "record_sha256": "564b9fd56f9f1730196522406a8ac8766040b69bc979b97b325e05f3490f6108"
+    },
+    "attrs": {
+      "version": "26.1.0",
+      "record_sha256": "bd56b0a44556594a01dc2fae804b1cefe21d37943ba7e2f622dde22c0709def2"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "ctb.protocol_candidate.v2",
+  "protocol_id": "ctb.symmetry.candidate.v0_2",
+  "status": "candidate",
+  "benchmark_eligible": false,
+  "purpose": "原创结构解析/native接口开发，不是物性测量",
+  "input_domain": "3d_ordered_full_occupancy",
+  "reference_geometry": "input",
+  "parameters": {
+    "symprec_A": 0.01,
+    "angle_tolerance_deg": 5.0,
+    "target_symmetrization": false
+  },
+  "required_resolutions": [
+    "pin installed spglib and structure parser versions"
+  ],
+  "validation_status": "not_scientifically_validated"
+}

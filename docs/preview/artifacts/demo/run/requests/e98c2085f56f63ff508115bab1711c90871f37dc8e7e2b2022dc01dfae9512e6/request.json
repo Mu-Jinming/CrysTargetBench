@@ -1,0 +1,156 @@
+{
+  "adapter": {
+    "id": "second_example.v1",
+    "version": "0.1.1"
+  },
+  "adapter_api_version": 1,
+  "dependencies": [],
+  "execution_mode": "external",
+  "geometry": {
+    "cell": [
+      [
+        5.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "coordinate_system": "fractional",
+    "domain_checks": {
+      "axis_permutation_invariant": true,
+      "diagonal_replication_invariant": true,
+      "general_unimodular_basis_invariance_guaranteed": false,
+      "heuristic_id": "vacuum_guard.v1",
+      "maximum_empty_slab_A": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "origin_translation_invariant": true,
+      "physical_dimensionality_classification": false,
+      "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+      "rule": "ordered_3d.v1",
+      "scope": "original_submission_only",
+      "stability_evidence": false,
+      "vacuum_limit_A": 10.0
+    },
+    "geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+    "length_unit": "angstrom",
+    "magnetic_state": {
+      "kind": "nonmagnetic",
+      "moments": [
+        0.0,
+        0.0
+      ]
+    },
+    "occupancy": [
+      1.0,
+      1.0
+    ],
+    "parent": null,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "species": [
+      "Ar",
+      "Ar"
+    ],
+    "stage": "input",
+    "transformation": {
+      "basis_mapping": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "kind": "identity",
+      "site_mapping": [
+        0,
+        1
+      ]
+    }
+  },
+  "method": {
+    "asset_fingerprints": [],
+    "effective_parameters": {
+      "basis": "pw",
+      "cutoff_Ry": 80,
+      "force_tolerance_eV_A": 0.02,
+      "hubbard_u": {},
+      "k_grid": [
+        2,
+        2,
+        2
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "soc": false,
+      "spin": 1,
+      "stress_tolerance_GPa": 0.1,
+      "xc": "PBE"
+    },
+    "method_id": "synthetic.preview.v1",
+    "software": [
+      {
+        "name": "analytic_test",
+        "version": "analytic-fixture-1"
+      }
+    ]
+  },
+  "method_digest": "4ead57294e6471cb761e9b6766e8c3e9d8899ec112f15c2eb559b4f7d491944c",
+  "operation": "relaxation",
+  "recipe": {
+    "id": "ctb.external.relaxation.v2",
+    "parameters": {}
+  },
+  "request_digest": "e98c2085f56f63ff508115bab1711c90871f37dc8e7e2b2022dc01dfae9512e6",
+  "request_id": "e98c2085f56f63ff508115bab1711c90871f37dc8e7e2b2022dc01dfae9512e6",
+  "requested_quantities": [
+    "energy",
+    "forces",
+    "relaxed_geometry",
+    "stress"
+  ],
+  "sample_geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+  "sampling": {},
+  "schema_version": "ctb.dft.request.v2"
+}

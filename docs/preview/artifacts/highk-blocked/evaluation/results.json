@@ -1,0 +1,220 @@
+{
+  "results": [
+    {
+      "constraints": [
+        {
+          "decision": "unknown",
+          "id": "phonon_gate",
+          "measurement": "phonon",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "gap_gate",
+          "measurement": "gap",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "kappa_gate",
+          "measurement": "kappa",
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      ],
+      "decision": "unknown",
+      "input_status": "valid",
+      "item_id": "item-000000",
+      "measurement_eligibility": {
+        "gap": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "kappa": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "phonon": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      },
+      "measurements": {},
+      "reference_geometry": null,
+      "reference_geometry_id": null
+    },
+    {
+      "constraints": [
+        {
+          "decision": "unknown",
+          "id": "phonon_gate",
+          "measurement": "phonon",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "gap_gate",
+          "measurement": "gap",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "kappa_gate",
+          "measurement": "kappa",
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      ],
+      "decision": "unknown",
+      "input_status": "valid",
+      "item_id": "item-000001",
+      "measurement_eligibility": {
+        "gap": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "kappa": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "phonon": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      },
+      "measurements": {},
+      "reference_geometry": null,
+      "reference_geometry_id": null
+    },
+    {
+      "constraints": [
+        {
+          "decision": "unknown",
+          "id": "phonon_gate",
+          "measurement": "phonon",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "gap_gate",
+          "measurement": "gap",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "kappa_gate",
+          "measurement": "kappa",
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      ],
+      "decision": "unknown",
+      "input_status": "valid",
+      "item_id": "item-000002",
+      "measurement_eligibility": {
+        "gap": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "kappa": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "phonon": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      },
+      "measurements": {},
+      "reference_geometry": null,
+      "reference_geometry_id": null
+    },
+    {
+      "constraints": [
+        {
+          "decision": "unknown",
+          "id": "phonon_gate",
+          "measurement": "phonon",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "gap_gate",
+          "measurement": "gap",
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        {
+          "decision": "unknown",
+          "id": "kappa_gate",
+          "measurement": "kappa",
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      ],
+      "decision": "unknown",
+      "input_status": "invalid",
+      "item_id": "item-000003",
+      "measurement_eligibility": {
+        "gap": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "kappa": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        },
+        "phonon": {
+          "eligible": false,
+          "reasons": [
+            "measurement_missing"
+          ]
+        }
+      },
+      "measurements": {},
+      "reference_geometry": null,
+      "reference_geometry_id": null
+    }
+  ]
+}

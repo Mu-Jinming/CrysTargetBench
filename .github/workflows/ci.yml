@@ -1,0 +1,30 @@
+name: engine-free-conformance
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install '.[dev,numerical,export]' ./examples/dft_adapters/abacus ./tests/plugins/second
+      - run: python -m pytest -q --junitxml=test-results.xml
+      - run: python -m build --no-isolation
+      - run: python -m build --no-isolation --wheel --outdir dist examples/dft_adapters/abacus
+      - run: python -m build --no-isolation --wheel --outdir dist tests/plugins/second
+      - run: python -m tools.s3_release_check --wheel dist/crystargetbench-0.3.3-py3-none-any.whl --abacus-wheel dist/ctb_abacus_example-0.1.1-py3-none-any.whl --second-wheel dist/ctb_second_example-0.1.1-py3-none-any.whl --output release-check
+      - run: python -m tools.preview_export --output public-export --archive dist/CTB-0.3.3-public-source.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: engine-free-evidence
+          path: |
+            test-results.xml
+            release-check/
+            dist/*.whl
+            dist/*.tar.gz
+            dist/*.zip
+            dist/*.manifest.json
+            public-export/PUBLIC_EXPORT_AUDIT.json

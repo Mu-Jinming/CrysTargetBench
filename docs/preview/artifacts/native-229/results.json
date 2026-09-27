@@ -1,0 +1,124 @@
+{
+  "results": [
+    {
+      "constraints": [
+        {
+          "decision": "fail",
+          "id": "sg_target",
+          "measurement": "sg",
+          "reasons": []
+        }
+      ],
+      "decision": "fail",
+      "input_status": "valid",
+      "item_id": "item-000000",
+      "measurement_eligibility": {
+        "sg": {
+          "eligible": true,
+          "reasons": []
+        }
+      },
+      "measurements": {
+        "sg": {
+          "artifact_refs": [],
+          "asset_digests": {},
+          "backend_family": "native",
+          "backend_id": "symmetry",
+          "backend_version": "2.6.0",
+          "benchmark_eligible": false,
+          "calculation_status": "completed",
+          "definition_id": "space_group_number@native:symmetry:ac04f9c5b87a4795",
+          "dependency_measurement_ids": [],
+          "diagnostics": {
+            "angle_tolerance_deg": 5.0,
+            "ase_version": "3.26.0",
+            "hall_number": 523,
+            "hall_symbol": "-F 4 2 3",
+            "international": "Fm-3m",
+            "space_group_number": 225,
+            "spglib_version": "2.6.0",
+            "symprec_A": 0.01,
+            "target_symmetrization": false
+          },
+          "identity_status": "verified",
+          "item_links": [
+            "item-000000"
+          ],
+          "measurement_id": "9403fad3fa6938b900c0ab859f55332f486f2a1c67dc715ca3857fc97ce5715c",
+          "model_digest": null,
+          "physics_fidelity": "native",
+          "property_id": "space_group_number",
+          "protocol_digest": "0b7d15e1a74226f4befaffa7bc6705f5173f4f71eae0968f1a24840047996569",
+          "quality_status": "accepted",
+          "reasons": [],
+          "reference_geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162",
+          "source_backend_id": null,
+          "unit": "1",
+          "upstream_fidelity": [],
+          "value": 225
+        }
+      },
+      "reference_geometry_id": "7d024affeab52834aa422fb44a8c1f87391eae6d6b056a5c27d7221ba0dfe162"
+    },
+    {
+      "constraints": [
+        {
+          "decision": "pass",
+          "id": "sg_target",
+          "measurement": "sg",
+          "reasons": []
+        }
+      ],
+      "decision": "pass",
+      "input_status": "valid",
+      "item_id": "item-000001",
+      "measurement_eligibility": {
+        "sg": {
+          "eligible": true,
+          "reasons": []
+        }
+      },
+      "measurements": {
+        "sg": {
+          "artifact_refs": [],
+          "asset_digests": {},
+          "backend_family": "native",
+          "backend_id": "symmetry",
+          "backend_version": "2.6.0",
+          "benchmark_eligible": false,
+          "calculation_status": "completed",
+          "definition_id": "space_group_number@native:symmetry:ac04f9c5b87a4795",
+          "dependency_measurement_ids": [],
+          "diagnostics": {
+            "angle_tolerance_deg": 5.0,
+            "ase_version": "3.26.0",
+            "hall_number": 529,
+            "hall_symbol": "-I 4 2 3",
+            "international": "Im-3m",
+            "space_group_number": 229,
+            "spglib_version": "2.6.0",
+            "symprec_A": 0.01,
+            "target_symmetrization": false
+          },
+          "identity_status": "verified",
+          "item_links": [
+            "item-000001"
+          ],
+          "measurement_id": "a6f064fed1521947fc8f2e21b0cc642b25b79820001765e3e532961f20c217b7",
+          "model_digest": null,
+          "physics_fidelity": "native",
+          "property_id": "space_group_number",
+          "protocol_digest": "0b7d15e1a74226f4befaffa7bc6705f5173f4f71eae0968f1a24840047996569",
+          "quality_status": "accepted",
+          "reasons": [],
+          "reference_geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+          "source_backend_id": null,
+          "unit": "1",
+          "upstream_fidelity": [],
+          "value": 229
+        }
+      },
+      "reference_geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f"
+    }
+  ]
+}

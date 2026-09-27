@@ -1,0 +1,48 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.nominal.exploratory",
+  "title": "探索代理任务，不替代正式High-K",
+  "mode": "constrained_rank",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "phonon": {
+      "property_id": "phonon_path_min_frequency_THz",
+      "unit": "THz",
+      "required_fidelity": "mlff"
+    },
+    "gap": {
+      "property_id": "band_gap_eV",
+      "unit": "eV",
+      "required_fidelity": "surrogate"
+    },
+    "kappa": {
+      "property_id": "dielectric_ionic_nominal_trace_over3",
+      "unit": "1",
+      "required_fidelity": "protocol_default"
+    }
+  },
+  "report": [
+    "phonon",
+    "gap",
+    "kappa"
+  ],
+  "constraints": [
+    {
+      "id": "phonon_gate",
+      "measurement": "phonon",
+      "operator": "ge",
+      "value": -0.001
+    },
+    {
+      "id": "gap_gate",
+      "measurement": "gap",
+      "operator": "gt",
+      "value": 2.0
+    }
+  ],
+  "ranking": {
+    "measurement": "kappa",
+    "direction": "maximize"
+  }
+}

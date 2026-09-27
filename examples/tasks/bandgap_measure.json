@@ -1,0 +1,18 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.bandgap.measure",
+  "title": "带隙分布与覆盖",
+  "mode": "measure",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "gap": {
+      "property_id": "band_gap_eV",
+      "unit": "eV",
+      "required_fidelity": "protocol_default"
+    }
+  },
+  "report": [
+    "gap"
+  ]
+}

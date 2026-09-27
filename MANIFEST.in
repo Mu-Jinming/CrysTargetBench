@@ -1,0 +1,23 @@
+include README.md LICENSE CITATION.cff CONTRIBUTING.md SECURITY.md THIRD_PARTY.md CHANGELOG.md pyproject.toml
+include .github/workflows/ci.yml
+include OWNER_METADATA_TODO.md CTB_REPOSITORY_METADATA.json
+recursive-include src/crystargetbench *.py *.json *.cif
+recursive-include examples *.py *.json *.cif *.md *.toml
+recursive-include tests *.py *.json *.md *.toml
+include tools/generate_s2_numerical.py tools/cleanroom_verify.py tools/s3_examples.py tools/s3_release_check.py tools/s3_public_export.py
+include tools/s3_1_evidence.py
+include tools/preview_demo.py tools/preview_journeys.py tools/preview_export.py tools/preview_ci.py
+include CTB_S2_Addendum/examples/MLFF_LIVE_PERMIT.disabled.json
+prune docs
+include docs/tasks_and_metrics.md docs/backends.md docs/protocol_comparability.md docs/DFT_ADAPTER_API.md
+include docs/ABACUS_SUPPORT_MATRIX.json docs/ABACUS_PARSER_EVIDENCE.md docs/release_checklist.md docs/PUBLIC_REPOSITORY_READINESS.md
+include docs/CTB_S3_1_MIGRATION.md
+include docs/PREVIEW_SDK_WALKTHROUGH.md
+prune .git
+prune .venvs
+prune .ctb
+prune dist
+prune runs
+prune wheelhouse
+global-exclude *.pyc *.pth *.pt *.ckpt *.upf *.UPF *.orb *.so
+global-exclude */build/* */*.egg-info/*

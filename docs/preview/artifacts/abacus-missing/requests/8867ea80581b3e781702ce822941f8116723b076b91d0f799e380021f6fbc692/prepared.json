@@ -1,0 +1,62 @@
+{
+  "files": [
+    {
+      "relative_path": "INPUT",
+      "role": "input",
+      "sha256": "2b20a9fecb739f6ad6a822983194d1f7b436ee90f5e7faf24931b7a3e88f7a18",
+      "size_bytes": 343
+    },
+    {
+      "relative_path": "STRU",
+      "role": "input",
+      "sha256": "78c47fafc79abca2ca830e8b9ea81ec4766d2ebc118a48070bb501baa048b2e9",
+      "size_bytes": 205
+    },
+    {
+      "relative_path": "KPT",
+      "role": "input",
+      "sha256": "1ad281c0f88e2f4269b222db91fc59e3365188569a96e8629b57c8f65b0613e7",
+      "size_bytes": 29
+    },
+    {
+      "relative_path": "mapping.json",
+      "role": "input",
+      "sha256": "1884b06b92b4f289aba05b1196315ca2a116418ade03f1cd3c554e2d914f491f",
+      "size_bytes": 124
+    }
+  ],
+  "mapping": {
+    "basis": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "coordinate_convention": "cartesian_angstrom",
+    "output_to_input": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "reasons": [
+    "missing_user_asset:Ar",
+    "user_must_stage_verified_asset:assets/USER_ASSET.upf"
+  ],
+  "request_digest": "8867ea80581b3e781702ce822941f8116723b076b91d0f799e380021f6fbc692",
+  "request_id": "8867ea80581b3e781702ce822941f8116723b076b91d0f799e380021f6fbc692",
+  "schema_version": "ctb.dft.prepared.v1",
+  "status": "blocked_assets"
+}

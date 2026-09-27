@@ -1,0 +1,278 @@
+{
+  "benchmark_eligible": false,
+  "comparability_digest": "73a8d99c9afabea5bea0d8258d004391be423fa1ce17f6cd40f36e94fb97b0a6",
+  "execution_kind": "external",
+  "missing_capabilities": [
+    "electronic_dielectric",
+    "ionic_dielectric",
+    "phonon_spectrum"
+  ],
+  "next_actions": [
+    "complete site method/capabilities"
+  ],
+  "physics_calls": 0,
+  "physics_fidelity": "dft",
+  "protocol_digest": "d95a2445655c27f4e79f4ee76d120edc4b9732cf053f018c130b30cc7328fad7",
+  "protocol_lock": {
+    "adapter": {
+      "adapter_id": "abacus_example.v1",
+      "adapter_version": "0.1.1",
+      "api_version": 1,
+      "benchmark_eligible": false,
+      "capabilities": [
+        {
+          "engine_versions": [
+            "3.7.4"
+          ],
+          "implementation": "implemented",
+          "live_tested": false,
+          "parser_tested": true,
+          "quantity": "energy",
+          "restrictions": [
+            "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+          ]
+        },
+        {
+          "engine_versions": [
+            "3.7.4"
+          ],
+          "implementation": "implemented",
+          "live_tested": false,
+          "parser_tested": true,
+          "quantity": "forces",
+          "restrictions": [
+            "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+          ]
+        },
+        {
+          "engine_versions": [
+            "3.7.4"
+          ],
+          "implementation": "implemented",
+          "live_tested": false,
+          "parser_tested": true,
+          "quantity": "stress",
+          "restrictions": [
+            "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+          ]
+        },
+        {
+          "engine_versions": [
+            "3.7.4"
+          ],
+          "implementation": "implemented",
+          "live_tested": false,
+          "parser_tested": true,
+          "quantity": "relaxed_geometry",
+          "restrictions": [
+            "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+          ]
+        },
+        {
+          "engine_versions": [
+            "3.7.4"
+          ],
+          "implementation": "implemented",
+          "live_tested": false,
+          "parser_tested": true,
+          "quantity": "eigenvalues",
+          "restrictions": [
+            "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+          ]
+        },
+        {
+          "engine_versions": [
+            "3.7.4"
+          ],
+          "implementation": "implemented",
+          "live_tested": false,
+          "parser_tested": true,
+          "quantity": "occupations",
+          "restrictions": [
+            "ABACUS 3.7.4 documented grammar; PW/PBE/nonmagnetic; synthetic parser fixtures only"
+          ]
+        }
+      ],
+      "distribution": "ctb-abacus-example",
+      "family": "dft",
+      "provider_id": "abacus_example",
+      "schema_version": "ctb.dft.adapter_manifest.v1",
+      "science_validated": false
+    },
+    "benchmark_eligible": false,
+    "ctb_version": "0.3.2",
+    "geometry_schema": "existing_ctb_snapshot",
+    "method": {
+      "asset_fingerprints": [
+        {
+          "identifier": "Ar:USER_ASSET.upf",
+          "kind": "pseudopotential",
+          "sha256": "6a1398c6c37da28dbbb961bad36f6c0f52a7e76595183c808422ef1c71429712"
+        }
+      ],
+      "effective_parameters": {
+        "basis": "pw",
+        "cutoff_Ry": 80,
+        "force_tolerance_eV_A": 0.005,
+        "hubbard_u": {},
+        "k_grid": [
+          4,
+          4,
+          4
+        ],
+        "k_shift": [
+          0,
+          0,
+          0
+        ],
+        "occupations": "fixed",
+        "scf_tolerance": 1e-08,
+        "soc": false,
+        "spin": 1,
+        "stress_tolerance_GPa": 0.1,
+        "xc": "PBE"
+      },
+      "method_id": "user.abacus.pw.pbe.v1",
+      "software": [
+        {
+          "name": "ABACUS",
+          "version": "3.7.4"
+        }
+      ]
+    },
+    "protocol": {
+      "benchmark_eligible": false,
+      "input_domain": "3d_ordered_full_occupancy",
+      "parameters": {
+        "band_gap": {
+          "definition": "kmesh_generalized_ks",
+          "functional": "PBE",
+          "mesh_policy_id": "2e3ddb543cbfc004b7b8aea390ca6f4b60f12821dc2aa83d8109127076cee31b",
+          "spin_u_soc_policy_id": "e087cc54fb4e47622b6a65fbe377f425926ca936493e84954067377ac936820c"
+        },
+        "dft": {
+          "cutoff_and_convergence_profile": "677a668468c915d58708380a73dbe30e56e4231556181ec7e43e9b9970d2bfa1",
+          "parameter_set_id": "user.abacus.pw.pbe.v1",
+          "pseudopotential_manifest_sha256": "fb375f7c0b47725081f7fa4d9e284e094f73deac5855ddf8af4b3c837dc09624"
+        },
+        "dielectric": {
+          "boundary": "fixed_strain",
+          "components": [
+            "electronic",
+            "ionic"
+          ],
+          "frequency": "static",
+          "negative_optical_mode_policy": "reject_quality",
+          "scalarization": "trace_over_3",
+          "silent_frequency_floor": false
+        },
+        "phonon": {
+          "displacement_A": 0.01,
+          "force_constant_symmetrization": true,
+          "force_drift_subtraction": true,
+          "gamma_center": true,
+          "is_plusminus": "auto",
+          "mesh": [
+            8,
+            8,
+            8
+          ],
+          "nac": "from_dft_born_and_electronic",
+          "q_scope": "mesh",
+          "supercell_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "relaxation": {
+          "fmax_eV_per_A": 0.005,
+          "max_steps": 2000,
+          "require_converged": true,
+          "stress_max_GPa": 0.1,
+          "target_pressure_GPa": 0.0
+        }
+      },
+      "protocol_id": "ctb.band_gap.dielectric.phonon.relaxation.candidate.v0_2",
+      "purpose": "S1 candidate recipe planning; numerical settings are not convergence evidence",
+      "reference_geometry": "relaxed",
+      "required_resolutions": [
+        "pin backend versions, model or pseudopotential content and numerical parameter sets",
+        "verify common reference geometry, stationary quality and input domain",
+        "validate numerical convergence and units before scientific release",
+        "authorize physical execution resource limits"
+      ],
+      "schema_version": "ctb.protocol_candidate.v2",
+      "status": "candidate",
+      "validation_status": "not_scientifically_validated"
+    },
+    "recipe_version": "ctb.external_reducers.v2",
+    "scheduling": {
+      "dft_response_gates": "explicit_DAG_conditions_preserved",
+      "measurement_order": [
+        "gap",
+        "phonon",
+        "kappa"
+      ],
+      "priority_groups": [
+        "band_gap",
+        "phonon",
+        "dielectric",
+        "space_group",
+        "other_including_bulk"
+      ],
+      "reference_dependency": "validate_then_relax_or_check_then_freeze_before_measurements",
+      "s2_local_gates": {
+        "eos_point_unqualified": "skip_remaining_points_no_fit",
+        "measurement_accepted_fail": "continue_independent_measurements",
+        "measurement_failed_or_unknown": "continue_independent_measurements",
+        "reference_unqualified": "unknown_all"
+      },
+      "tie_break": "property_group_then_property_id_then_alias_unicode",
+      "version": "ctb.serial_recipe_schedule.v1"
+    },
+    "schema_version": "ctb.external_protocol.v2",
+    "science_validated": false
+  },
+  "reasons": [
+    "missing capabilities: electronic_dielectric,ionic_dielectric,phonon_spectrum"
+  ],
+  "routes": {
+    "gap": {
+      "definition_id": "band_gap_eV@external:d95a2445655c27f4",
+      "family": "dft",
+      "physics_fidelity": "dft",
+      "provider": "abacus_example",
+      "requires_stationary_reference": false
+    },
+    "kappa": {
+      "definition_id": "dielectric_total_static_trace_over3@external:d95a2445655c27f4",
+      "family": "dft",
+      "physics_fidelity": "dft",
+      "provider": "abacus_example",
+      "requires_stationary_reference": false
+    },
+    "phonon": {
+      "definition_id": "phonon_mesh_min_frequency_THz@external:d95a2445655c27f4",
+      "family": "dft",
+      "physics_fidelity": "dft",
+      "provider": "abacus_example",
+      "requires_stationary_reference": true
+    }
+  },
+  "schema_version": "ctb.external_plan.v1",
+  "status": "blocked_capability",
+  "submitted_jobs": 0
+}

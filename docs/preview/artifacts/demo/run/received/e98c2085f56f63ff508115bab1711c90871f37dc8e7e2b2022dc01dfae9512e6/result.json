@@ -1,0 +1,381 @@
+{
+  "adapter": {
+    "id": "second_example.v1",
+    "version": "0.1.1"
+  },
+  "adapter_api_version": 1,
+  "convergence": {
+    "engine_completed": true,
+    "ionic": true,
+    "response": null,
+    "scf": true
+  },
+  "effective_method": {
+    "asset_fingerprints": [],
+    "effective_parameters": {
+      "basis": "pw",
+      "cutoff_Ry": 80,
+      "force_tolerance_eV_A": 0.02,
+      "hubbard_u": {},
+      "k_grid": [
+        2,
+        2,
+        2
+      ],
+      "k_shift": [
+        0,
+        0,
+        0
+      ],
+      "occupations": "fixed",
+      "scf_tolerance": 1e-08,
+      "soc": false,
+      "spin": 1,
+      "stress_tolerance_GPa": 0.1,
+      "xc": "PBE"
+    },
+    "method_id": "synthetic.preview.v1",
+    "software": [
+      {
+        "name": "analytic_test",
+        "version": "analytic-fixture-1"
+      }
+    ]
+  },
+  "engine": {
+    "name": "analytic_test",
+    "version": "analytic-fixture-1"
+  },
+  "errors": [],
+  "execution": {
+    "count_evidence": "unknown",
+    "engine_invocations": null,
+    "mode": "fixture",
+    "wall_seconds": null
+  },
+  "mapping": {
+    "basis": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "coordinate_convention": "cartesian_angstrom",
+    "output_to_input": [
+      0,
+      1
+    ]
+  },
+  "method_digest": "4ead57294e6471cb761e9b6766e8c3e9d8899ec112f15c2eb559b4f7d491944c",
+  "observations": [
+    {
+      "calculation_status": "completed",
+      "definition_id": "synthetic.second.energy",
+      "diagnostics": {},
+      "evidence_kind": "synthetic",
+      "quality_status": "qualified",
+      "quantity": "energy",
+      "raw_artifacts": [
+        {
+          "relative_path": "authored-observations.json",
+          "role": "raw_output",
+          "sha256": "d5a0273b594f540793a77172043c4d06d3ea6f03c188f2f970fbd11998bcb261",
+          "size_bytes": 5425
+        }
+      ],
+      "unit": "eV",
+      "value": -1.0
+    },
+    {
+      "calculation_status": "completed",
+      "definition_id": "synthetic.second.forces",
+      "diagnostics": {},
+      "evidence_kind": "synthetic",
+      "quality_status": "qualified",
+      "quantity": "forces",
+      "raw_artifacts": [
+        {
+          "relative_path": "authored-observations.json",
+          "role": "raw_output",
+          "sha256": "d5a0273b594f540793a77172043c4d06d3ea6f03c188f2f970fbd11998bcb261",
+          "size_bytes": 5425
+        }
+      ],
+      "unit": "eV/angstrom",
+      "value": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "calculation_status": "completed",
+      "definition_id": "synthetic.second.relaxed_geometry",
+      "diagnostics": {},
+      "evidence_kind": "synthetic",
+      "quality_status": "qualified",
+      "quantity": "relaxed_geometry",
+      "raw_artifacts": [
+        {
+          "relative_path": "authored-observations.json",
+          "role": "raw_output",
+          "sha256": "d5a0273b594f540793a77172043c4d06d3ea6f03c188f2f970fbd11998bcb261",
+          "size_bytes": 5425
+        }
+      ],
+      "unit": "angstrom",
+      "value": {
+        "cell": [
+          [
+            5.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            5.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            5.0
+          ]
+        ],
+        "coordinate_system": "fractional",
+        "domain_checks": {
+          "axis_permutation_invariant": true,
+          "diagonal_replication_invariant": true,
+          "general_unimodular_basis_invariance_guaranteed": false,
+          "heuristic_id": "vacuum_guard.v1",
+          "maximum_empty_slab_A": [
+            2.5,
+            2.5,
+            2.5
+          ],
+          "origin_translation_invariant": true,
+          "physical_dimensionality_classification": false,
+          "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+          "rule": "ordered_3d.v1",
+          "scope": "original_submission_only",
+          "stability_evidence": false,
+          "vacuum_limit_A": 10.0
+        },
+        "geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+        "length_unit": "angstrom",
+        "magnetic_state": {
+          "kind": "nonmagnetic",
+          "moments": [
+            0.0,
+            0.0
+          ]
+        },
+        "occupancy": [
+          1.0,
+          1.0
+        ],
+        "parent": null,
+        "pbc": [
+          true,
+          true,
+          true
+        ],
+        "positions": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "species": [
+          "Ar",
+          "Ar"
+        ],
+        "stage": "input",
+        "transformation": {
+          "basis_mapping": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "kind": "identity",
+          "site_mapping": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "calculation_status": "completed",
+      "definition_id": "synthetic.second.stress",
+      "diagnostics": {},
+      "evidence_kind": "synthetic",
+      "quality_status": "qualified",
+      "quantity": "stress",
+      "raw_artifacts": [
+        {
+          "relative_path": "authored-observations.json",
+          "role": "raw_output",
+          "sha256": "d5a0273b594f540793a77172043c4d06d3ea6f03c188f2f970fbd11998bcb261",
+          "size_bytes": 5425
+        }
+      ],
+      "unit": "eV/angstrom^3",
+      "value": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "observed_geometry": {
+    "cell": [
+      [
+        5.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "coordinate_system": "fractional",
+    "domain_checks": {
+      "axis_permutation_invariant": true,
+      "diagonal_replication_invariant": true,
+      "general_unimodular_basis_invariance_guaranteed": false,
+      "heuristic_id": "vacuum_guard.v1",
+      "maximum_empty_slab_A": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "origin_translation_invariant": true,
+      "physical_dimensionality_classification": false,
+      "representation_notice": "Projection gaps use supplied reciprocal cell normals; general basis changes can change admission. Derived calculation snapshots bypass this heuristic and use explicit resource budgets.",
+      "rule": "ordered_3d.v1",
+      "scope": "original_submission_only",
+      "stability_evidence": false,
+      "vacuum_limit_A": 10.0
+    },
+    "geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+    "length_unit": "angstrom",
+    "magnetic_state": {
+      "kind": "nonmagnetic",
+      "moments": [
+        0.0,
+        0.0
+      ]
+    },
+    "occupancy": [
+      1.0,
+      1.0
+    ],
+    "parent": null,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "species": [
+      "Ar",
+      "Ar"
+    ],
+    "stage": "input",
+    "transformation": {
+      "basis_mapping": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "kind": "identity",
+      "site_mapping": [
+        0,
+        1
+      ]
+    }
+  },
+  "reference_geometry_id": "930104b1642381945e4c19f437a487c549c89270df94b94a32cfca9c66a52f8f",
+  "request_digest": "e98c2085f56f63ff508115bab1711c90871f37dc8e7e2b2022dc01dfae9512e6",
+  "request_id": "e98c2085f56f63ff508115bab1711c90871f37dc8e7e2b2022dc01dfae9512e6",
+  "schema_version": "ctb.dft.result.v2"
+}

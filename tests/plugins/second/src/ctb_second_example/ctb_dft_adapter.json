@@ -1,0 +1,145 @@
+{
+  "schema_version": "ctb.dft.adapter_manifest.v1",
+  "api_version": 1,
+  "provider_id": "second_example",
+  "adapter_id": "second_example.v1",
+  "adapter_version": "0.1.1",
+  "distribution": "ctb-second-example",
+  "family": "synthetic",
+  "science_validated": false,
+  "benchmark_eligible": false,
+  "capabilities": [
+    {
+      "quantity": "energy",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "forces",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "stress",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "relaxed_geometry",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "eigenvalues",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "occupations",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "phonon_spectrum",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "electronic_dielectric",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "ionic_dielectric",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "total_dielectric",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    },
+    {
+      "quantity": "born_charges",
+      "implementation": "implemented",
+      "parser_tested": true,
+      "live_tested": false,
+      "engine_versions": [
+        "analytic-fixture-1"
+      ],
+      "restrictions": [
+        "synthetic contract evidence only"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "ctb.method_policy.v2",
+  "mode": "auto",
+  "preferred_mlff": "mattersim",
+  "promotion_scope": "joint_geometry_group",
+  "promote_on_missing_capability": true,
+  "promote_on_missing_installation": false,
+  "on_runtime_failure": "record_failure",
+  "allow_surrogates": false,
+  "overrides": {},
+  "warm_start": "none"
+}

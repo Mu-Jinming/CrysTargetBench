@@ -1,0 +1,18 @@
+{
+  "kind": "authored_ideal_geometry_software_fixture",
+  "not_physical_reference": true,
+  "physics_labels": null,
+  "license": "CC0-1.0",
+  "purpose": "native parsing and space-group identification tests; no stability/gap/dielectric assertions",
+  "items": [
+    {
+      "file": "ideal_fcc.cif",
+      "intended_space_group_for_native_test": 225
+    },
+    {
+      "file": "ideal_bcc.cif",
+      "intended_space_group_for_native_test": 229
+    }
+  ],
+  "native_test_executed_in_kit": false
+}

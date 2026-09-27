@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "ctb.method_policy.v2"
+    },
+    "mode": {
+      "enum": [
+        "auto",
+        "mlff",
+        "dft",
+        "hybrid"
+      ]
+    },
+    "preferred_mlff": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preferred_dft": {
+      "type": "string",
+      "minLength": 1
+    },
+    "promotion_scope": {
+      "const": "joint_geometry_group"
+    },
+    "promote_on_missing_capability": {
+      "type": "boolean"
+    },
+    "promote_on_missing_installation": {
+      "const": false
+    },
+    "on_runtime_failure": {
+      "const": "record_failure"
+    },
+    "allow_surrogates": {
+      "type": "boolean"
+    },
+    "overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^(native|mlff|dft|surrogate):[A-Za-z0-9_.-]+$"
+      }
+    },
+    "warm_start": {
+      "enum": [
+        "none",
+        "mlff_pre_relax_then_dft"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "mode",
+    "promotion_scope",
+    "promote_on_missing_capability",
+    "promote_on_missing_installation",
+    "on_runtime_failure",
+    "allow_surrogates",
+    "overrides",
+    "warm_start"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "hybrid"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "overrides": {
+            "minProperties": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "overrides": {
+            "maxProperties": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "mlff"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "allow_surrogates": {
+            "const": false
+          },
+          "warm_start": {
+            "const": "none"
+          },
+          "promote_on_missing_capability": {
+            "const": false
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

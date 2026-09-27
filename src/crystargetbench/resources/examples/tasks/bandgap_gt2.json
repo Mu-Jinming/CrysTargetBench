@@ -1,0 +1,26 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "example.bandgap.gt2",
+  "title": "带隙严格大于2eV；具体方法由protocol锁定",
+  "mode": "screen",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "gap": {
+      "property_id": "band_gap_eV",
+      "unit": "eV",
+      "required_fidelity": "protocol_default"
+    }
+  },
+  "report": [
+    "gap"
+  ],
+  "constraints": [
+    {
+      "id": "gap_min",
+      "measurement": "gap",
+      "operator": "gt",
+      "value": 2.0
+    }
+  ]
+}

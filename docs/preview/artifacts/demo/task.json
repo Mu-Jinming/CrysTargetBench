@@ -1,0 +1,26 @@
+{
+  "schema_version": "ctb.task.v2",
+  "task_id": "synthetic.preview.gap",
+  "title": "Synthetic SDK demo, not DFT",
+  "mode": "screen",
+  "reference_geometry": "relaxed",
+  "metric_scope": "submission",
+  "measurements": {
+    "gap": {
+      "property_id": "band_gap_eV",
+      "unit": "eV",
+      "required_fidelity": "protocol_default"
+    }
+  },
+  "report": [
+    "gap"
+  ],
+  "constraints": [
+    {
+      "id": "example_gap",
+      "measurement": "gap",
+      "operator": "ge",
+      "value": 2.0
+    }
+  ]
+}
